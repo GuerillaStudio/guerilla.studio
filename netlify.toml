@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/.well-known/host-meta"
+  to = "https://mastodon.guerilla.studio/.well-known/host-meta"
+  status = 301
+  force = true
