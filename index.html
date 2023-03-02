@@ -1,201 +1,110 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guérilla.Studio</title>
-    <meta name="color-scheme" content="light dark">
-    <style media="screen">
-      html {
-        height: 100%;
-        overflow: hidden;
-        -webkit-overflow-scrolling: auto;
-      }
-      body {
-        height: 100%;
-        overflow: hidden;
-        background-color: #000;
-        background: #000 no-repeat;
-        background-size: cover;
-        background-position: center;
-        margin: 0;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: monospace;
-        color: #fff;
-        text-align: center;
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
-      }
-      .title {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-      }
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Guérilla.Studio</title>
+		<meta name="description" content="A Radical Cyber Products Studio ∴ by two women and a cat in a trench-coat" />
 
-      body::before {
-        background: linear-gradient(#d9d9d9 50%, #000 50%);
-        background-size: 100% 4px;
-        background-repeat: repeat-y;
-        opacity: .14;
-        box-shadow : inset 0px 0px 1px 1px rgba(0, 0, 0, .8);
-        animation: pulse 5s linear infinite;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0e0e0e">
+		<meta name="msapplication-TileColor" content="#0e0e0e">
+		<meta name="theme-color" content="#ff2749">
 
-      @keyframes pulse {
-        0% {transform: scale(1.001);  opacity: .14; }
-        8% {transform: scale(1.000);  opacity: .13; }
-        15% {transform: scale(1.004);  opacity: .14; }
-        30% {transform: scale(1.002);  opacity: .11; }
-        100% {transform: scale(1.000);  opacity: .14; }
-      }
+		<meta property="og:image:width" content="512">
+		<meta property="og:image:height" content="512">
+		<meta property="og:description" content="A Radical Cyber Products Studio &there4; by two women and a cat in a trench-coat">
+		<meta property="og:title" content="Gu&eacute;rilla.Studio">
+		<meta property="og:url" content="https://guerilla.studio">
+		<meta property="og:image" content="https://guerilla.studio/favicon-big.png">
 
-      body:after {
-        content : '';
-        position : absolute;
-        top : 0px;
-        width : 100%;
-        height : 5px;
-        background : #fff;
-        background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(255,250,250,1) 50%,rgba(255,255,255,0.98) 51%,rgba(255,0,0,0) 100%); /* W3C */
-        opacity : .1;
-        animation: vline 1.25s linear infinite;
-      }
-
-      @keyframes vline {
-        0%   { top: 0px;}
-        100% { top: 100%;}
-      }
-
-      .svg-filter {
-        width: 1px;
-        height: 1px;
-        visibility: hidden;
-        position: absolute;
-      }
-
-      .distortion {
-        text-align: center;
-        animation: transform 2.5s steps(10) infinite, glitch 3.2s infinite;
-      }
-
-      @keyframes glitch {
-        45% {
-          filter: none;
-        }
-        46% {
-          filter: url(#dist-01);
-        }
-        47% {
-          filter: url(#dist-02);
-        }
-        48% {
-          filter: url(#dist-03);
-        }
-        50% {
-          filter: none;
-        }
-        95% {
-          filter: none;
-        }
-        96% {
-          filter: url(#dist-02);
-        }
-        97% {
-          filter: url(#dist-04);
-        }
-      }
-      @keyframes transform {
-        0% {
-          transform: translate(-5%, -5%) skew(-10deg) scale(1.05);
-        }
-        1% {
-          transform: none;
-        }
-        88% {
-          transform: none;
-        }
-        89% {
-          transform: translate(5%, 10%) scale(1.05);
-        }
-        90% {
-          transform: none;
-        }
-      }
-
-      /* Reset glitch stuff */
-
-      @media (prefers-reduced-motion) {
-        body::before {
-          animation: unset;
-        }
-        body:after {
-          content: none;
-        }
-        .distortion {
-          animation: unset;
-        }
-      }
-    </style>
-  </head>
-  <body class="distortion">
-    <div>
-        <h1 class="title">
-          Guérilla.Studio
-        </h1>
-        <p><em><small>(website is a work in progress)</small></em></p>
-    </div>
-
-
-    <!-- Filter -->
-
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filter">
-      <defs>
-        <filter id="dist-01">
-          <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="8" result="noise" seed="0"/>
-          <feConvolveMatrix in="noise" order="3" result="snoise"
-          kernelMatrix="
-            0  -1   0
-            -1   5  -1
-            0  -1   0
-          "/>
-          <feDisplacementMap id="displacement" in="SourceGraphic" in2="snoise" scale="6" />
-        </filter>
-        <filter id="dist-02">
-          <feTurbulence id="turbulence" baseFrequency="0.2" numOctaves="8" result="noise" seed="1"/>
-          <feConvolveMatrix in="noise" order="3" result="snoise"
-          kernelMatrix="
-            0  -1   0
-            -1   5  -1
-            0  -1   0
-          "/>
-          <feDisplacementMap id="displacement" in="SourceGraphic" in2="snoise" scale="6" />
-        </filter>
-        <filter id="dist-03">
-          <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="6" result="noise" seed="2"/>
-          <feConvolveMatrix in="noise" order="3" result="snoise"
-          kernelMatrix="
-            0  -1   0
-            -1   5  -1
-            0  -1   0
-          "/>
-          <feDisplacementMap id="displacement" in="SourceGraphic" in2="snoise" scale="6" />
-        </filter>
-        <filter id="dist-04">
-          <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="6" result="noise" seed="2" type="FractalNoise"/>
-          <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
-        </filter>
-      </defs>
-    </svg>
-
-  </body>
+		<style media="screen">
+			html {
+			box-sizing: border-box;
+			}
+			*, *::after, *::before {
+			box-sizing: inherit;
+			}
+			body {
+			font-size: 1.15em;
+			line-height: 1.5em;
+			margin: 0;
+			background: snow;
+			padding: min(4rem, 3vw);
+			border: clamp(1rem, 2vmax, 2rem) solid hsl(0, 0%, 5%);
+			min-height: 100vh;
+			min-height: 100dvh;
+			font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+			}
+			.main {
+			max-width: 35rem;
+			}
+			.main > * + * {
+			margin-top: 3em;
+			}
+			.main > p + :is(ul,ol) {
+			margin-top: 0;
+			}
+			.header {
+			margin-bottom: 2rem;
+			}
+			.title {
+			margin-bottom: .5em;
+			}
+			.slogan {
+			font-style: italic;
+			font-size: .87em;
+			}
+			a {
+			color: #FF2749;
+			}
+			li:not(:first-child) {
+			margin-top: .5em;
+			}
+			.announce {
+			font-size: .9em;
+			background-color: hsl(43, 70%, 96%);
+			border: .2rem dashed hsl(43, 74%, 74%);
+			color: hsl(43, 74%, 25%);
+			padding: 1em;
+			}
+			.footer {
+			margin-block: 3em;
+			font-style: italic;
+			font-family: "Georgia", "Times", "Times New Roman", serif;
+			color: hsl(0, 0%, 42%)
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title">Guérilla.Studio</h1>
+			<p class="slogan">A Radical Cyber Products Studio ∴ by two women and a cat in a trench-coat</p>
+		</header>
+		<main class="main">
+			<p class="announce">
+				We gave our website to raccoons in need of material to throw at anti-riot police, so this is just what we have for now.<br> We're gonna build another website later, it's okay, always fuck the police first!&nbsp;✊
+			</p>
+			<p>In the waiting, you can look at some of our projects (most of the sources are available on our <a href="https://github.com/GuerillaHQ">Github</a>):</p>
+			<ul>
+				<li><a href="https://souvenir.cam">Souvenir</a>&nbsp;— Capture few seconds of your webcam/camera and generate a gif</li>
+				<li><a href="https://radio.eldritch.cafe">Eldritch Radio</a>&nbsp;— A Mastodon based music webradio</li>
+				<li><a href="https://vanillalist.top">Vanilla List</a>&nbsp;— A vanilla JavaScript plugins repository.</li>
+				<li><a href="https://music.guerilla.studio">Now Playing</a>&nbsp;— A collection of handpicked music albums we like</li>
+				<li><a href="https://inspiration.guerilla.studio">Moodblog</a>&nbsp;— An unorganized patchwork from our graphic researches</li>
+			</ul>
+			<p>Or feel free to follow what we say (nothing very interesting I'm afraid):</p>
+			<ul>
+				<li><span aria-hidden="true">🐘&nbsp;</span><a href="https://mastodon.guerilla.studio/@milia">Milia on Mastodon</a></li>
+				<li><span aria-hidden="true">🐘&nbsp;</span><a href="https://mastodon.guerilla.studio/@tixie">Tixie on Mastodon</a></li>
+				<li><span aria-hidden="true">☠️&nbsp;</span><a href="https://twitter.com/GuerillaHQ">The Studio on Twitter</a></li>
+			</ul>
+		</main>
+		<footer class="footer">
+			<span aria-hidden="true">~</span>&nbsp;Sincerely yours, Guérilla.Studio
+		</footer>
+	</body>
 </html>
