@@ -217,8 +217,8 @@ pre[class*="language-diff-"] {
 
 .main pre {
 	background: hsl(var(--main-hue, 70), 23%, 12%);
-	margin-right: calc(-50vw / 1.5 + var(--container-width) / 2);
-	max-width: min(calc(var(--container-width) * 1.75), calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding))));
+	width: 150%;
+	max-width: calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding)));
 }
 
 .main code {
