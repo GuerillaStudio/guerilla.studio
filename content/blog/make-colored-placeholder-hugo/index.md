@@ -2,6 +2,7 @@
 title: How to make colored placeholder on Hugo
 date: 2020-03-17T18:41:53.010Z
 author: Tixie
+kofi: https://ko-fi.com/J3J3F2YAT
 ---
 
 While using [Hugo](https://gohugo.io/) as a static site generator, I've found a way to generate a colored placeholder with a little trick.

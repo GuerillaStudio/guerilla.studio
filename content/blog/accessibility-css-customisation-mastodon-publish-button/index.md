@@ -3,6 +3,7 @@ title: "Accessibility and CSS customisation in Mastodon: The “Publish” butto
 description: "Why you probably shouldn't use custom CSS labels"
 date: 2023-07-19T21:43:16.114Z
 author: Tixie
+kofi: https://ko-fi.com/J3J3F2YAT
 ---
 
 {% image "./custom-mastodon-publish-button-banner.png", "Banner of publish buttons in different colors and labels (Toot, Oot, Pouet, Launch)", [560, 1120, 'auto'], [560px, 1120px, 1404px] %}
