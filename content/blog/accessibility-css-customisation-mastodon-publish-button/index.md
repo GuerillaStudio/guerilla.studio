@@ -8,7 +8,7 @@ author: Tixie
 {% image "./custom-mastodon-publish-button-banner.png", "Banner of publish buttons in different colors and labels (Toot, Oot, Pouet, Launch)", [560, 1120, 'auto'], [560px, 1120px, 1404px] %}
 
 \
-For context since in its [v4.0](https://github.com/mastodon/mastodon/releases/tag/v4.0.0), Mastodon changed the post button's label previously called “Toot” to “Publish” [for clarity reasons](https://mastodon.social/@Gargron/108352418240054955). However many people were attached to that [historically funny](https://mastodon.social/@Hbomberguy/146524) label, and due to its limited customisability Mastodon wasn't allowing admins to setup a custom label for this button.\
+For context since its [v4.0](https://github.com/mastodon/mastodon/releases/tag/v4.0.0), Mastodon changed the post button's label previously called “Toot” to “Publish” [for clarity reasons](https://mastodon.social/@Gargron/108352418240054955). However many people were attached to that [historically funny](https://mastodon.social/@Hbomberguy/146524) label, and due to its limited customisability Mastodon wasn't allowing admins to setup a custom label for this button.\
 \
 At this time I've seen many instance admins sharing a CSS hack to customize that label and reverse that change or just be creative. It was possible because Mastodon allows admins to apply additional custom CSS to their instance through their administration panel (Site Settings → Appearance).\
 \
