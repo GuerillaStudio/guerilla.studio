@@ -31,7 +31,7 @@ Why? Let's start with taking common snippet I seen (found [here](https://ricard.
 }
 ```
 
-## The original label will be read screen readers
+## The original label will be read by screen readers
 
 Screen readers won't read(/speak) hidden content in a web page. And for being hidden its requires to match one of these conditions :
 
@@ -53,13 +53,13 @@ With that made, our original label still being rendered, because even if it's th
 
 So there is a good chance that the original label will still be read by screen readers.
 
-## The content property is read by screen readers
+## The content property is also read by screen readers
 
 It's a misconception I've encounter several time while talking to other developers. Maybe because since it's in CSS it shouldn't end up in the accessibility tree? Well **it does**.
 
 I haven't made a test on all screen-readers myself, but [someone did](https://jhalabi.com/blog/before-after-accessibility) in 2017. I don't have more recent stats but since it's the behavior expected in [the W3C specification](https://www.w3.org/TR/css-content-3/#accessibility), I think it's safe to imagine it's gonna be more adopted through the years.
 
-## What screen-readers will probably read
+## What screen readers will probably end up reading
 
 “Publish!Toot!” (or “Toot!Publish!” if `:before` is used instead of `:after`).
 
