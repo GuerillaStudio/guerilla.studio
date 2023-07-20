@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+title: Blog of Guérilla.Studio
+description: We write stuff sometime
+eleventyNavigation:
+  key: Blog
+  order: 2
+---
+<h1>Blog</h1>
+<p class="slogan">{{description}}</p>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}

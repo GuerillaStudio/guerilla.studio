@@ -12,3 +12,7 @@
   from = "/@*"
   to = "https://mastodon.guerilla.studio/@:splat"
   status = 302
+
+[build]
+	publish = "_site"
+	command = "npm run build"

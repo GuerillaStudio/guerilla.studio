@@ -1,0 +1,335 @@
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	/* ℹ️ Emoji fonts are explicitely declared at the fontstacks end to be sure to be displayed correctely on every platforms. https://answers.microsoft.com/en-us/windows/forum/all/flag-emoji/85b163bc-786a-4918-9042-763ccf4b6c05 */
+}
+
+/* Theme colors */
+:root {
+
+	--main-hue: 351;
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-70: hsl(var(--main-hue), 5%, 42%);
+	--color-gray-90: hsl(var(--main-hue), 10%, 10%);
+
+	--background-color: snow;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: hsl(var(--main-hue), 100%, 58%);
+	--text-color-link-active: hsl(var(--main-hue), 80%, 47%);
+
+	--syntax-tab-size: 2;
+	--container-width: 35rem;
+	--page-border-width: clamp(.5rem, 1.5vmax, 2rem);
+	--page-padding: min(4rem, 3vw);
+}
+
+
+/* Global stylesheet */
+html {
+	box-sizing: border-box;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+body {
+	font-size: 1.15em;
+	line-height: 1.5em;
+	margin: 0;
+	background: snow;
+	padding: var(--page-padding);
+	border: var(--page-border-width) solid hsl(0, 0%, 5%);
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.text-center { text-align: center; }
+
+.container {
+	max-width: var(--container-width);
+}
+
+a[href] {
+	color: var(--text-color-link);
+	text-decoration-thickness: .1em;
+}
+
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  border-style: none;
+  vertical-align: middle;
+}
+
+ pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+	background: hsl(var(--main-hue, 70), 25%, 15%);
+}
+
+
+/* Header */
+
+.header {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.header .logo {
+	display: inline-block;
+	margin-inline: auto;
+	text-align: center;
+	margin-block: 0;
+}
+.header .logo img {
+	width: 15rem;
+	max-width: 90%;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0;
+	padding-top: .5em;
+	padding-bottom: .75em;
+	margin: 0;
+	list-style: none;
+	border-bottom: .1rem dashed var(--color-gray-50);
+}
+.nav-item {
+	margin: 0;
+	padding: 0;
+}
+.nav-item a {
+	padding: .5em 1em;
+	display: inline-block;
+}
+
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+	text-decoration-thickness: .1em;
+
+}
+
+/* Main */
+
+.main > * + * {
+	margin-top: 2em;
+}
+.main p + :is(ul,ol, p) {
+	margin-top: 0;
+}
+
+.main :where(h1, h2, h3, h4, h5, h6) + :is(p, ul,ol) {
+	margin-top: 0;
+}
+
+.main p:last-child {
+	margin-bottom: 0;
+}
+.main p {
+	line-height: 1.5;
+}
+
+.main li {
+	line-height: 1.5;
+}
+
+.main h1 { --main-title-size: 2em; }
+.main h2 { --main-title-size: 1.5em; }
+.main h3 { --main-title-size: 1.17em; }
+.main h4 { --main-title-size: 1em; }
+.main h5 { --main-title-size: 0.83em; }
+.main h6 { --main-title-size: 0.67em; }
+
+.main :where(h1, h2, h3, h4, h5, h6) {
+	font-size: calc(var(--main-title-size) * 0.85 + 1vw);
+	line-height: 1.2em;
+}
+
+.main pre {
+	background: hsl(var(--main-hue, 70), 23%, 12%);
+	margin-right: calc(-50vw / 1.5 + var(--container-width) / 2);
+	max-width: min(calc(var(--container-width) * 1.75), calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding))));
+}
+
+.main code {
+	word-break: break-all;
+	padding: .3rem .5rem;
+	font-size: 85%;
+	background: hsl(var(--main-hue, 70), 25%, 95%);
+	border-radius: .3rem;
+}
+
+.main pre code {
+	background-color: transparent;
+}
+
+.main .date {
+	font-style: italic;
+	font-family: "Georgia", "Times", "Times New Roman", serif;
+	color: var(--color-gray-70);
+}
+
+.main .slogan {
+	font-style: italic;
+	font-size: .87em;
+	font-weight: inherit;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+.post-backLink + h1 {
+	margin-top: .8em;
+}
+
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+/* Announce banner */
+.announce {
+	font-size: .9em;
+	background-color: hsl(43, 70%, 96%);
+	border: .2rem dashed hsl(43, 74%, 74%);
+	color: hsl(43, 74%, 25%);
+	padding: 1em;
+}
+
+/* Footer */
+.footer {
+	margin-block: 3em;
+	font-style: italic;
+	font-family: "Georgia", "Times", "Times New Roman", serif;
+	color: var(--color-gray-70);
+}
