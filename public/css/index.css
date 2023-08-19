@@ -21,7 +21,7 @@
 	--text-color-link-active: hsl(var(--main-hue), 80%, 47%);
 
 	--syntax-tab-size: 2;
-	--container-width: 35rem;
+	--container-width: 36rem;
 	--page-border-width: clamp(.5rem, 1.5vmax, 2rem);
 	--page-padding: min(4rem, 3vw);
 }
