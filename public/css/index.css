@@ -292,6 +292,11 @@ pre[class*="language-diff-"] {
 	margin-top: .8em;
 }
 
+/* Blog post page */
+
+.post img {
+	border-radius: .3em;
+}
 
 /* Direct Links / Markdown Headers */
 .header-anchor {
