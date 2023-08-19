@@ -4,10 +4,12 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+<div class="post">
+	<div class="post-backLink"><a href="/blog"><span aria-hidden="true">←</span>&nbsp;Back to posts list</a></div>
+	<h1>{{ title }}</h1>
 
-<div class="post-backLink"><a href="/blog"><span aria-hidden="true">←</span>&nbsp;Back to posts list</a></div>
-<h1>{{ title }}</h1>
+	<time class="date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 
-<time class="date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+	{{ content | safe }}
 
-{{ content | safe }}
+</div>
