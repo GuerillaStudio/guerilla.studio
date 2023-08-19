@@ -206,9 +206,9 @@ pre[class*="language-diff-"] {
 .main h1 { --main-title-size: 2em; }
 .main h2 { --main-title-size: 1.5em; }
 .main h3 { --main-title-size: 1.17em; }
-.main h4 { --main-title-size: 1em; }
-.main h5 { --main-title-size: 0.83em; }
-.main h6 { --main-title-size: 0.67em; }
+.main h4 { --main-title-size: 0.7em; }
+.main h5 { --main-title-size: 0.53em; }
+.main h6 { --main-title-size: 0.37em; }
 
 .main :where(h1, h2, h3, h4, h5, h6) {
 	font-size: calc(var(--main-title-size) * 0.85 + 1vw);
