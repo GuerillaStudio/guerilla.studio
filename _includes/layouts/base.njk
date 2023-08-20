@@ -18,14 +18,14 @@
 		<meta property="og:image:height" content="{{ social_card_height or '512' }}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:title" content="{{ title or metadata.title }}">
-		<meta property="og:url" content="{{ page.url | htmlBaseUrl }}">
-		<meta property="og:image" content="{{ (social_card_url or '/favicon-big.png') | htmlBaseUrl }}">
+		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+		<meta property="og:image" content="{{ metadata.url }}{{ (social_card_url or '/favicon-big.png') }}">
 
 		<meta name="twitter:card" content="{{ twitter_card_type or 'summary' }}">
 		<meta name="twitter:site" content="@GuerillaHQ">
 		<meta name="twitter:title" content="{{ title or metadata.title }}">
 		<meta name="twitter:description" content="{{ description or metadata.description }}">
-		<meta name="twitter:image" content="{{ (social_card_url or '/favicon-big.png') | htmlBaseUrl }}">
+		<meta name="twitter:image" content="{{ metadata.url }}{{ (social_card_url or '/favicon-big.png') }}">
 
 		{#- Atom and JSON feeds #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
