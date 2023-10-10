@@ -342,13 +342,14 @@ h2 + .header-anchor {
 	color: var(--color-gray-70);
 }
 
-/* Helpers */
+/* Floating raccoon illu */
 
-.float-left {
+.floating-raccon {
 	float: left;
-}
-
-.float-left:where(.margin-around) {
-margin-inline-end: 1ch;
-margin-block-end: 1ch;
+margin-inline: 1ch;
+margin-block-end: -1ch;
+margin-inline-start: -1ch;
+shape-margin: 0.7ch;
+transform: translateY(0.8ch);
+shape-outside: url(/raccoon-knife-illu.png);
 }
