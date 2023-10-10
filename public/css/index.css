@@ -341,3 +341,14 @@ h2 + .header-anchor {
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 	color: var(--color-gray-70);
 }
+
+/* Helpers */
+
+.float-left {
+	float: left;
+}
+
+.float-left:where(.margin-around) {
+margin-inline-end: 1ch;
+margin-block-end: 1ch;
+}
