@@ -8,7 +8,7 @@
 /* Theme colors */
 :root {
 
-	--main-hue: 351;
+	--main-hue: 347;
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
 	--color-gray-70: hsl(var(--main-hue), 5%, 42%);
@@ -17,8 +17,8 @@
 	--background-color: snow;
 
 	--text-color: var(--color-gray-90);
-	--text-color-link: hsl(var(--main-hue), 100%, 58%);
-	--text-color-link-active: hsl(var(--main-hue), 80%, 47%);
+	--text-color-link: hsl(var(--main-hue), 80%, 45%);
+	--text-color-link-active: hsl(var(--main-hue), 80%, 58%);
 
 	--syntax-tab-size: 2;
 	--container-width: 36rem;
