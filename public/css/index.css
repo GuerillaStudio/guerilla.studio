@@ -142,9 +142,12 @@ pre[class*="language-diff-"] {
 	margin-inline: auto;
 	text-align: center;
 	margin-block: 0;
+	cursor: pointer;
 }
+
 .header .logo img {
-	width: 15rem;
+	width: 17rem;
+	width: min(17rem, 40vw);
 	max-width: 90%;
 	height: auto;
 }
