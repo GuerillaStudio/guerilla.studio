@@ -297,6 +297,11 @@ pre[class*="language-diff-"] {
 
 /* Blog post page */
 
+.post h1 {
+	width: 150%;
+	max-width: calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding)));
+	text-wrap: balance
+}
 .post img {
 	border-radius: .3em;
 }
