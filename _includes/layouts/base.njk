@@ -43,7 +43,7 @@
 
 		<header class="header container">
 				<a class="logo" href="/" aria-label="Home" title="Home">
-					{% include "logo-base64.njk" %}
+					{% include "logo-inline.njk" %}
 				</a>
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
@@ -62,6 +62,6 @@
 		<footer class="footer">
 			<div><span aria-hidden="true">~</span>&nbsp;Sincerely yours, {%- if author %} {{ author }} from{%- endif %} Guérilla.Studio {%- if kofi %} (<a href="{{ kofi }}">You can support me on Ko-fi</a>){%- endif %}</div>
 		</footer>
-
+		<script type="module" src="/is-land.js"></script>
 	</body>
 </html>
