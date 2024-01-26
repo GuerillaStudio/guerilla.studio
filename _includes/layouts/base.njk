@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
-		<meta name="author" content="{%- if author %}{{ author }}{%- else %}Guérilla.Studio{% endif %}">
+		<meta name="author" content="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -15,12 +15,19 @@
 		<meta name="msapplication-TileColor" content="#0e0e0e">
 		<meta name="theme-color" content="#cf173f">
 
+		{# General OG tags #}
 		<meta property="og:image:width" content="{{ social_card_width or '512' }}">
 		<meta property="og:image:height" content="{{ social_card_height or '512' }}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:title" content="{{ title or metadata.title }}">
 		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
 		<meta property="og:image" content="{{ metadata.url }}{{ (social_card_url or '/favicon-big.png') }}">
+		{# Blog post OG tags #}
+		{%- if layout === "layouts/post.njk" %}
+		<meta property="og:type" content="article">
+		<meta property="article:author" content="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
+		<meta property="article:published_time" content="{{ date.toISOString() }}">
+		{% endif %}
 
 		<meta name="twitter:card" content="{{ twitter_card_type or 'summary' }}">
 		<meta name="twitter:site" content="@GuerillaHQ">
@@ -60,7 +67,7 @@
 		</main>
 
 		<footer class="footer">
-			<div><span aria-hidden="true">~</span>&nbsp;Sincerely yours, {%- if author %} {{ author }} from{%- endif %} Guérilla.Studio {%- if kofi %} (<a href="{{ kofi }}">You can support me on Ko-fi</a>){%- endif %}</div>
+			<div><span aria-hidden="true">~</span>&nbsp;Sincerely yours, {%- if author %} {{ author }} from{%- endif %} {{ metadata.title }} {%- if kofi %} (<a href="{{ kofi }}">You can support me on Ko-fi</a>){%- endif %}</div>
 		</footer>
 		<script type="module" src="/is-land.js"></script>
 	</body>
