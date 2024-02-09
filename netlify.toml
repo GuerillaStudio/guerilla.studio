@@ -9,6 +9,10 @@
   status = 301
   force = true
 [[redirects]]
+  from = "/authorize_interaction?uri=*"
+  to = "https://mastodon.guerilla.studio/authorize_interaction?uri=:splat"
+  status = 301
+[[redirects]]
   from = "/@*"
   to = "https://mastodon.guerilla.studio/@:splat"
   status = 302
