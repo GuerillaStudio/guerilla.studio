@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family: "Atkinson Hyperlegible", -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	/* ℹ️ Emoji fonts are explicitely declared at the fontstacks end to be sure to be displayed correctely on every platforms. https://answers.microsoft.com/en-us/windows/forum/all/flag-emoji/85b163bc-786a-4918-9042-763ccf4b6c05 */
 }
@@ -42,10 +42,12 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-	font-size: 1.15em;
+	font-size: 1.2em;
 	line-height: 1.5em;
 	margin: 0;
 	background: snow;
@@ -359,4 +361,42 @@ margin-inline-start: -1ch;
 shape-margin: 0.7ch;
 transform: translateY(0.8ch);
 shape-outside: url(/raccoon-knife-illu.png);
+}
+
+/* Font-face */
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: local('Atkinson Hyperlegible Bold'), local('AtkinsonHyperlegible-Bold'),
+			url('/fonts/subset-AtkinsonHyperlegible-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: local('Atkinson Hyperlegible Bold Italic'), local('AtkinsonHyperlegible-BoldItalic'),
+			url('/fonts/subset-AtkinsonHyperlegible-BoldItalic.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: local('Atkinson Hyperlegible Regular'), local('AtkinsonHyperlegible-Regular'),
+			url('/fonts/subset-AtkinsonHyperlegible-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: local('Atkinson Hyperlegible Italic'), local('AtkinsonHyperlegible-Italic'),
+			url('/fonts/subset-AtkinsonHyperlegible-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: fallback;
 }
