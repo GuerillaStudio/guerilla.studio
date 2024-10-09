@@ -258,6 +258,10 @@ pre[class*="language-diff-"] {
 	font-weight: inherit;
 }
 
+.main h1 + .slogan {
+	margin-block-start: -1em;
+}
+
 /* Posts list */
 .postlist {
 	list-style: none;

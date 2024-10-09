@@ -2,7 +2,7 @@ module.exports = {
 	title: "Guérilla.Studio",
 	url: "https://guerilla.studio",
 	language: "en",
-	description: "A Radical Cyber Products Studio ∴ by two women and a cat in a trench-coat",
+	description: "Independent Web Software ∴ by a small collective of cross-disciplinary web experts",
 	author: {
 		name: "Guérilla.Studio",
 		email: "hi@guerilla.studio",
