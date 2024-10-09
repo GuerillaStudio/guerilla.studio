@@ -47,7 +47,7 @@ body {
 }
 
 body {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	line-height: 1.5em;
 	margin: 0;
 	background: snow;
@@ -147,9 +147,9 @@ pre[class*="language-diff-"] {
 	cursor: pointer;
 }
 
-.header .logo img {
-	width: 17rem;
-	width: min(17rem, 40vw);
+.header .logo svg {
+	width: 20rem;
+	width: min(20rem, 60vw);
 	max-width: 90%;
 	height: auto;
 }
@@ -201,17 +201,25 @@ pre[class*="language-diff-"] {
 	margin-bottom: 0;
 }
 .main p {
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 .main li {
-	line-height: 1.5;
+	line-height: 1.6;
+	margin-block-end: .5em;
 }
 
-.main h1 { --main-title-size: 2em; }
-.main h2 { --main-title-size: 1.5em; }
-.main h3 { --main-title-size: 1.17em; }
-.main h4 { --main-title-size: 0.7em; }
+.main hr {
+	margin-block: 1.5em;
+	border-style: dashed;
+	border-color: var(--color-gray-50);
+}
+
+
+.main h1 { --main-title-size: 1.5em; }
+.main h2 { --main-title-size: 1.17em; }
+.main h3 { --main-title-size: 1em; }
+.main h4 { --main-title-size: 0.8em; }
 .main h5 { --main-title-size: 0.53em; }
 .main h6 { --main-title-size: 0.37em; }
 
@@ -337,6 +345,7 @@ h2 + .header-anchor {
 /* Announce banner */
 .announce {
 	font-size: .9em;
+	line-height: 1.5;
 	background-color: hsl(43, 70%, 96%);
 	border: .2rem dashed hsl(43, 74%, 74%);
 	color: hsl(43, 74%, 25%);
@@ -355,12 +364,12 @@ h2 + .header-anchor {
 
 .floating-raccon {
 	float: left;
-margin-inline: 1ch;
-margin-block-end: -1ch;
-margin-inline-start: -1ch;
-shape-margin: 0.7ch;
-transform: translateY(0.8ch);
-shape-outside: url(/raccoon-knife-illu.png);
+	margin-inline: 1ch;
+	margin-block-end: -1ch;
+	margin-inline-start: -1ch;
+	shape-margin: 0.7ch;
+	transform: translateY(0.5em);
+	shape-outside: url(/raccoon-knife-illu.png);
 }
 
 /* Font-face */
