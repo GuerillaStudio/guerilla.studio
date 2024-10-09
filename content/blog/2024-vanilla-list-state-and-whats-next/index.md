@@ -10,9 +10,9 @@ social_card_height: "630"
 twitter_card_type: "summary_large_image"
 ---
 
-As some of you might have noticed: [Vanilla List](https://vanillalist.top)—our index curating lightweight JavaScript plugins, is kinda in hiatus mode. I didn’t added any plugin/library since early 2023 and here were are, at the of 2024.
+As some of you might have noticed: [Vanilla List](https://vanillalist.top)—our index curating lightweight JavaScript plugins, is kinda in hiatus mode. I didn’t added any plugin/library since early 2023 and here were are, at the enf of 2024.
 
-There are several reasons reason behind it.
+There are several reasons behind it.
 
 ## It was painfull to manage
 
@@ -26,20 +26,20 @@ To which generally is followed by several back-and-forth until everything match 
 
 ## A radical change or just life? 😁
 
-At the end of 2023 while I was stuck in bed during a tough recovery time. So to keep my mind busy on something else I started working on a new version of the website (funny considering [the context](https://tixie.name/logs/03-01-2021-11-21-am/) of the last revamp).
+At the end of 2023 I was stuck in bed during a tough recovery time. So to keep my mind busy on something else tan physical pain I started working on a new version of the website (funny considering [the context](https://tixie.name/logs/03-01-2021-11-21-am/) of the last revamp).
 
 I had in mind to improve the plugin addition and suggestion aspects, along with adding more complex features I think would be useful to have.
 
-And while I was at it upgrade the entire stack the website is based on. It was mainly including upgrading to the next major version of the builder ([Eleventy](https://www.11ty.dev/)) and using some of its—at the time, bleading edge features. Changing completely the framework was also on the table.
+And while I was at it also upgrade the entire stack the website is based on. It mainly includes upgrading to the next major version of the builder ([Eleventy](https://www.11ty.dev/)) and using some of its (at the time) bleading edge features. Changing completely the framework was also on the table.
 
 All that included re-organizing and sanitize how plugins were currently stored.\
 So It was making sense for me to keep the online version in a frozen state in the meantime to limit the amount of modifications I’ll have to do when merging that new version.
 
 **What could possibly go wrong ahahah**… \**sigh*\* 🙄
 
-Well, I finally got out from recovery but burnout catched me up, big time.
+Well, I finally got out from recovery but burnout catched me up, *big time*.
 
-So unfortunately all that work got completely stopped.
+So unfortunately all that work completely stopped.
 
 I’ve spent basically all 2023 and 2024 trying to make things work in my life with burnout and other health issues.
 
