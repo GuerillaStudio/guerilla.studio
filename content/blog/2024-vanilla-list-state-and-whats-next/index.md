@@ -4,6 +4,7 @@ description: "After 2 years without updates, things are about to change!"
 date: 2024-10-09T07:50:19.785Z
 author: Tixie
 kofi: https://ko-fi.com/J3J3F2YAT
+mastodon: "@tixie@guerilla.studio"
 social_card_url: "/img/social-card-2024-vanilla-list-state-and-whats-next.png"
 social_card_width: "1200"
 social_card_height: "630"

@@ -4,6 +4,7 @@ description: "An image placeholder service to help during mockups"
 date: 2023-07-25T11:56:03.837Z
 author: Tixie
 kofi: https://ko-fi.com/J3J3F2YAT
+mastodon: "@tixie@guerilla.studio"
 ---
 
 **Now available at <span aria-hidden="true">→</span>&nbsp;[https://placehold.in](https://placehold.in?from=guerillablog)**

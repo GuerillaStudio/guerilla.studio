@@ -8,6 +8,7 @@ social_card_height: "630"
 twitter_card_type: "summary_large_image"
 author: Tixie
 kofi: https://ko-fi.com/J3J3F2YAT
+mastodon: "@tixie@guerilla.studio"
 ---
 
 {% image "header.png", "", [560, 1120, 'auto'], [560px, 1120px, 1200px] %}
