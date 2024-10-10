@@ -6,6 +6,7 @@ module.exports = {
 	author: {
 		name: "Guérilla.Studio",
 		email: "hi@guerilla.studio",
-		url: "https://guerilla.studio"
+		url: "https://guerilla.studio",
+		mastodon: "@GuerillaHQ@guerilla.studio"
 	}
 }
