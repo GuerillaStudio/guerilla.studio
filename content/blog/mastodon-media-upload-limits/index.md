@@ -6,9 +6,11 @@ social_card_url: "/img/social-card-mastodon-media-upload-limits.png"
 social_card_width: "1200"
 social_card_height: "630"
 twitter_card_type: "summary_large_image"
-author: Tixie
-kofi: https://ko-fi.com/J3J3F2YAT
-mastodon: "@tixie@guerilla.studio"
+author:
+  name: Tixie
+	url: "https://tixie.name"
+  mastodon: "@tixie@guerilla.studio"
+  kofi: "https://ko-fi.com/J3J3F2YAT"
 ---
 
 {% image "header.png", "", [560, 1120, 'auto'], [560px, 1120px, 1200px] %}
