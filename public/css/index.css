@@ -32,7 +32,7 @@ html {
 	box-sizing: border-box;
 }
 *, ::after, ::before {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html,
@@ -95,13 +95,13 @@ textarea,
 input,
 video,
 svg {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 img {
-  height: auto;
-  border-style: none;
-  vertical-align: middle;
+	height: auto;
+	border-style: none;
+	vertical-align: middle;
 }
 
  pre,
@@ -230,9 +230,9 @@ pre[class*="language-diff-"] {
 
 .main :is(h1, h2, h3) {
 	width: 150%;
-  width: 33ch;
-  max-width: calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding)));
-  text-wrap: balance;
+	width: 33ch;
+	max-width: calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding)));
+	text-wrap: balance;
 }
 
 
@@ -446,7 +446,7 @@ h2 + .header-anchor {
 
 @font-face {
 	font-family: 'Atkinson Hyperlegible';
-	src:  local('Atkinson Hyperlegible Italic'), local('AtkinsonHyperlegible-Italic'), url('/fonts/subset-AtkinsonHyperlegible-Italic.woff2') format('woff2');
+	src: local('Atkinson Hyperlegible Italic'), local('AtkinsonHyperlegible-Italic'), url('/fonts/subset-AtkinsonHyperlegible-Italic.woff2') format('woff2');
 
 	font-weight: normal;
 	font-style: italic;
