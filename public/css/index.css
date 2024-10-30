@@ -216,7 +216,6 @@ pre[class*="language-diff-"] {
 	border-color: var(--color-gray-50);
 }
 
-
 .main h1 { --main-title-size: 1.5em; }
 .main h2 { --main-title-size: 1.17em; }
 .main h3 { --main-title-size: 1em; }
@@ -228,6 +227,14 @@ pre[class*="language-diff-"] {
 	font-size: calc(var(--main-title-size) * 0.85 + 1vw);
 	line-height: 1.2em;
 }
+
+.main :is(h1, h2, h3) {
+	width: 150%;
+  width: 33ch;
+  max-width: calc(95vw - (2 * var(--page-border-width)) - (2 * var(--page-padding)));
+  text-wrap: balance;
+}
+
 
 .main pre {
 	background: hsl(var(--main-hue, 70), 23%, 12%);
