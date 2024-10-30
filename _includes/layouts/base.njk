@@ -14,7 +14,7 @@
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0e0e0e">
 		<meta name="msapplication-TileColor" content="#0e0e0e">
 		<meta name="theme-color" content="#cf173f">
-		<meta name="fediverse:creator" content="{%- if author.mastodon %}{{ author.mastodon }}{% else %}{{ metadata.author.mastodon }}{% endif %}"/>
+		<meta name="fediverse:creator" content="{%- if author and author.fedi_nickname %}{{ author.fedi_nickname }}{% else %}{{ metadata.author.fedi_nickname }}{% endif %}"/>
 
 		{# General OG tags #}
 		<meta property="og:image:width" content="{{ social_card_width or '512' }}">
@@ -26,7 +26,7 @@
 		{# Blog post OG tags #}
 		{%- if layout === "layouts/post.njk" %}
 		<meta property="og:type" content="article">
-		<meta property="article:author" content="{%- if author.name %}{{ author.name }}{% else %}{{ metadata.author.name }}{% endif %}">
+		<meta property="article:author" content="{%- if author and author.name %}{{ author.name }}{% else %}{{ metadata.author.name }}{% endif %}">
 		<meta property="article:published_time" content="{{ date.toISOString() }}">
 		{% endif %}
 
@@ -51,9 +51,9 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header class="header container">
-				<a class="logo" href="/" aria-label="Home" title="Home">
-					{% include "logo-inline.njk" %}
-				</a>
+			<a class="logo" href="/" aria-label="Home" title="Home">
+				{% include "logo-inline.njk" %}
+			</a>
 			<nav aria-label="Top level navigation menu">
 				<ul class="nav">
 				{%- for entry in collections.all | eleventyNavigation %}
@@ -68,18 +68,7 @@
 		</main>
 
 		<footer class="footer">
-			{# Signature section #}
-			<div>
-				<span aria-hidden="true">~</span>&nbsp;Sincerely yours,
-				{# Author of this page #}
-				{%- if author %}
-					{%- if author.url %}<a href="{%- if author.url %}">{{ author.name }}</a>{%- else %}{{ author.name }}{%- endif %}
-				{%- else %} Tixie &amp; Milia {%- endif %}
-				{# Author organization #}
-				from
-				{%- if author.org %}{{ author.org }}{%- endif %}{%- else %}{{ metadata.title }}
-				{# Support links (Only Ko-fi for now ) #}
-				{%- if kofi %} (<a href="{{ kofi }}">You can support me on Ko-fi</a>){%- endif %}</div>
+			{% include "footer-signature.njk" %}
 		</footer>
 		<script type="module" src="/is-land.js"></script>
 	</body>

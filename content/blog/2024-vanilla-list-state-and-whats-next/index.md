@@ -2,15 +2,17 @@
 title: "2024 Vanilla List’s state and what’s next"
 description: "After 2 years without updates, things are about to change!"
 date: 2024-10-09T07:50:19.785Z
+author:
+  name: "Tixie Salander"
+  url: "https://tixie.name"
+  email: "blog@guerilla.studio"
+  fedi_nickname: "@tixie@guerilla.studio"
+  social_link: "https://mastodon.guerilla.studio/@tixie"
+  kofi: "https://ko-fi.com/J3J3F2YAT"
 social_card_url: "/img/social-card-2024-vanilla-list-state-and-whats-next.png"
 social_card_width: "1200"
 social_card_height: "630"
 twitter_card_type: "summary_large_image"
-author:
-  name: Tixie
-	url: "https://tixie.name"
-  mastodon: "@tixie@guerilla.studio"
-  kofi: "https://ko-fi.com/J3J3F2YAT"
 ---
 
 As some of you might have noticed: [Vanilla List](https://vanillalist.top)—our index curating lightweight JavaScript plugins, is kinda in hiatus mode. I didn’t added any plugin/library since early 2023 and here were are, at the enf of 2024.

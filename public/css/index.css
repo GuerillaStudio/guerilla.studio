@@ -359,9 +359,25 @@ h2 + .header-anchor {
 /* Footer */
 .footer {
 	margin-block: 3em;
+}
+
+.footer-signature {
 	font-style: italic;
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 	color: var(--color-gray-70);
+}
+
+.footer-signature strong {
+	color: var(--color-gray-80);
+}
+
+.footer-signature a {
+	color: var(--color-gray-80);
+}
+
+.footer-signature_links{
+	display: inline-flex;
+	flex-wrap: wrap;
 }
 
 /* Floating raccoon illu */

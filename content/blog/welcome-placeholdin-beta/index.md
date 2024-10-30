@@ -3,9 +3,11 @@ title: "Welcome the beta of Placehold.in"
 description: "An image placeholder service to help during mockups"
 date: 2023-07-25T11:56:03.837Z
 author:
-  name: Tixie
-	url: "https://tixie.name"
-  mastodon: "@tixie@guerilla.studio"
+  name: "Tixie Salander"
+  url: "https://tixie.name"
+  email: "blog@guerilla.studio"
+  fedi_nickname: "@tixie@guerilla.studio"
+  social_link: "https://mastodon.guerilla.studio/@tixie"
   kofi: "https://ko-fi.com/J3J3F2YAT"
 ---
 

@@ -10,7 +10,7 @@ permalink: /feed/feed.json
 	"feed_url": "{{ permalink | htmlBaseUrl(metadata.url) }}",
 	"description": "{{ metadata.description }}",
 	"author": {
-		"name": "{{ metadata.author.name }}",
+		"name": "{{ metadata.author.name }} ({{ metadata.founders }})",
 		"url": "{{ metadata.author.url }}"
 	},
 	"items": [

@@ -2,15 +2,17 @@
 title: "The Mastodon media limitations final guide"
 description: "Because who's not tired of mystical errors when uploading something?"
 date: 2023-08-19T13:57:43.785Z
+author:
+  name: "Tixie Salander"
+  url: "https://tixie.name"
+  email: "blog@guerilla.studio"
+  fedi_nickname: "@tixie@guerilla.studio"
+  social_link: "https://mastodon.guerilla.studio/@tixie"
+  kofi: "https://ko-fi.com/J3J3F2YAT"
 social_card_url: "/img/social-card-mastodon-media-upload-limits.png"
 social_card_width: "1200"
 social_card_height: "630"
 twitter_card_type: "summary_large_image"
-author:
-  name: Tixie
-	url: "https://tixie.name"
-  mastodon: "@tixie@guerilla.studio"
-  kofi: "https://ko-fi.com/J3J3F2YAT"
 ---
 
 {% image "header.png", "", [560, 1120, 'auto'], [560px, 1120px, 1200px] %}

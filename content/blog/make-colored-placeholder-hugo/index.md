@@ -2,9 +2,11 @@
 title: How to make colored placeholder on Hugo
 date: 2020-03-17T18:41:53.010Z
 author:
-  name: Tixie
-	url: "https://tixie.name"
-  mastodon: "@tixie@guerilla.studio"
+  name: "Tixie Salander"
+  url: "https://tixie.name"
+  email: "blog@guerilla.studio"
+  fedi_nickname: "@tixie@guerilla.studio"
+  social_link: "https://mastodon.guerilla.studio/@tixie"
   kofi: "https://ko-fi.com/J3J3F2YAT"
 ---
 
