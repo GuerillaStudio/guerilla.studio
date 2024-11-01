@@ -15,57 +15,57 @@ social_card_height: "630"
 twitter_card_type: "summary_large_image"
 ---
 
-As some of you might have noticed: [Vanilla List](https://vanillalist.top)—our index curating lightweight JavaScript plugins, is kinda in hiatus mode. I didn’t added any plugin/library since early 2023 and here were are, at the enf of 2024.
+As some of you may have noticed: [Vanilla List](https://vanillalist.top)—our index curating lightweight JavaScript plugins, is kinda in hiatus mode. I didn’t add any plugin/library since early 2023 and here were are, at the end of 2024.
 
 There are several reasons behind it.
 
 ## It was painfull to manage
 
 Adding plugins to the website is a very manual and time consuming task.\
-Especially since I’m doing my best to curate only quality project and take time to offer them a good presentation.
+Especially since I’m doing my best to curate only quality projects and take time to offer them a good presentation.
 
 
 The process for suggesting plugins is even more laborious.\
-The (very kind) persons suggesting plugins has to fork the project and send a Pull Request.\
-To which generally is followed by several back-and-forth until everything match my quality criteria. Which is also draining for me.
+The (very kind) people suggesting plugins have to fork the project and send a Pull Request,
+followed by several back-and-forths, until everything matches my quality criteria. Which is also draining for me.
 
 ## A radical change or just life? 😁
 
-At the end of 2023 I was stuck in bed during a tough recovery time. So to keep my mind busy on something else tan physical pain I started working on a new version of the website (funny considering [the context](https://tixie.name/logs/03-01-2021-11-21-am/) of the last revamp).
+At the end of 2023 I was stuck in bed during a tough recovery time. So to keep my mind busy on something else than physical pain I started working on a new version of the website (funny considering [the context](https://tixie.name/logs/03-01-2021-11-21-am/) of the last revamp).
 
 I had in mind to improve the plugin addition and suggestion aspects, along with adding more complex features I think would be useful to have.
 
-And while I was at it also upgrade the entire stack the website is based on. It mainly includes upgrading to the next major version of the builder ([Eleventy](https://www.11ty.dev/)) and using some of its (at the time) bleading edge features. Changing completely the framework was also on the table.
+And while I was at it, also upgrade the entire stack the website is based on. This mainly includes upgrading to the next major version of the builder ([Eleventy](https://www.11ty.dev/)) and using some of its (at the time) bleeding edge features. Changing completely the framework was also on the table.
 
-All that included re-organizing and sanitize how plugins were currently stored.\
-So It was making sense for me to keep the online version in a frozen state in the meantime to limit the amount of modifications I’ll have to do when merging that new version.
+All that included re-organizing and sanitizing how plugins were currently stored.\
+So, it was making sense for me to keep the online version in a frozen state in the meantime to limit the amount of modifications I’d have to do when merging that new version.
 
 **What could possibly go wrong ahahah**… \**sigh*\* 🙄
 
-Well, I finally got out from recovery but burnout catched me up, *big time*.
+Well, I finally got out from recovery but burnout caught up with me, *big time*.
 
-So unfortunately all that work completely stopped.
+And unfortunately all that work completely stopped.
 
 I’ve spent basically all 2023 and 2024 trying to make things work in my life with burnout and other health issues.
 
 ---
 
-That’s why not much change or either news have been made for quite some time.
+That’s why not much has changed for quite some time.
 
 ## What now?
 
 Until now this project is purely made on my free time (my previous employer used to allow some time for me to work on it since it was useful for the company, that’s not the case anymore).\
-Noneless to say that I always refused to monetize it in any way. It’s not in my values, nothing is free but the fuck the advertising economy.
+Needless to say that I always refused to monetize it in any way. It’s not in my values. Nothing is free but fuck the advertising economy.
 
 Recently some things have slightly evolved in a better direction:
-1. I’m progressively recovering, enough to start working on tech projects a bit (I’ve merge a few PR lately)
-2. And big news: I’m now “full-time” working independently in a smaller structure I’ve co-founded that is non other that Guérilla.Studio! (I talk that decision briefly at the end of 2023 in [a post](https://tixie.name/logs/12-20-2023-1-04-end-of-a-chapter/) on my personal blog).
+1. I’m progressively recovering, enough to start working on tech projects a bit (I've merged a few PR lately)
+2. And big news: I’m now “full-time” working independently in a smaller structure I’ve co-founded that is no other that Guérilla.Studio! (I talked that decision briefly at the end of 2023 in [a post](https://tixie.name/logs/12-20-2023-1-04-end-of-a-chapter/) on my personal blog).
 
-Starting an adventure like that is sure something big and time/energy/money consuming but I’m surrounded by wonderful persons and organisations that help putting that into shape. (More infos to come later)
+Starting an adventure like that is certainly something big and time/energy/money consuming, but I’m surrounded by wonderful people and organisations that helped putting that into shape. (More info to come later)
 
-All that to say that I should have more time to finish Vanilla List’s new website (probably in 2025) and also fill it with plenty new plugins and libraries either [suggested](https://github.com/GuerillaStudio/vanillalist/labels/plugin%20suggestion) or that [I’ve aggregated](https://github.com/stars/TixieSalander/lists/vanilla-list-todo) along the way.
+All this to say that I should have more time to finish Vanilla List’s new website (probably in 2025) and also fill it with plenty new plugins and libraries, either [suggested](https://github.com/GuerillaStudio/vanillalist/labels/plugin%20suggestion) or that [I’ve aggregated](https://github.com/stars/TixieSalander/lists/vanilla-list-todo) along the way.
 
-It still will depend of the variable amount of available energy on free time I’ll have (since I’m a big fan of having a roof, food everyday and things like that 😅).
+It still will depend of the variable amount of available energy or free time I’ll have (since I’m a big fan of having a roof, food everyday and things like that 😅).
 
 ## How to help
 
