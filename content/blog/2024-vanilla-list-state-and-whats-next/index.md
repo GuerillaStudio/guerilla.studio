@@ -83,3 +83,6 @@ Thank you already if you have read everything until now 🫶
 *As sign of hope for the future, a preview of the future homepage*:
 
 {% image "./future-homepage-preview.png", "Preview of the future homepage on a desktop sized screen", [560, 1120, 'auto'], [560px, 1120px, 1200px] %}
+
+
+<small><i>Thanks Hécate for fixing my typos</i>🫶</small>
