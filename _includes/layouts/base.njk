@@ -17,12 +17,15 @@
 		<meta name="fediverse:creator" content="{%- if author and author.fedi_nickname %}{{ author.fedi_nickname }}{% else %}{{ metadata.author.fedi_nickname }}{% endif %}"/>
 
 		{# General OG tags #}
-		<meta property="og:image:width" content="{{ social_card_width or '512' }}">
-		<meta property="og:image:height" content="{{ social_card_height or '512' }}">
+		<meta property="og:image:width" content="{{ social_card_width or '1200' }}">
+		<meta property="og:image:height" content="{{ social_card_height or '650' }}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:title" content="{{ title or metadata.title }}">
 		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-		<meta property="og:image" content="{{ metadata.url }}{{ (social_card_url or '/favicon-big.png') }}">
+		<meta property="og:image" content="{{ metadata.url }}{{ (social_card_url or '/og-image-01.png') }}">
+		{%- if layout !== "layouts/post.njk" %}
+		<meta property="og:type" content="website">
+		{% endif %}
 		{# Blog post OG tags #}
 		{%- if layout === "layouts/post.njk" %}
 		<meta property="og:type" content="article">
