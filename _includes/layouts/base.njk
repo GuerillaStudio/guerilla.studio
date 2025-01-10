@@ -3,18 +3,25 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<title>{{ title or metadata.title }}</title>
+
 		<meta name="description" content="{{ description or metadata.description }}">
+		<meta itemprop="description" content="{{ description or metadata.description }}">
+
 		<meta name="author" content="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
+		<meta itemprop="author" content="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
+		<link rel="author" href="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
+		<meta name="fediverse:creator" content="{%- if author and author.fedi_nickname %}{{ author.fedi_nickname }}{% else %}{{ metadata.author.fedi_nickname }}{% endif %}"/>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0e0e0e">
+
 		<meta name="msapplication-TileColor" content="#0e0e0e">
 		<meta name="theme-color" content="#cf173f">
-		<meta name="fediverse:creator" content="{%- if author and author.fedi_nickname %}{{ author.fedi_nickname }}{% else %}{{ metadata.author.fedi_nickname }}{% endif %}"/>
 
 		{# General OG tags #}
 		<meta property="og:image:width" content="{{ social_card_width or '1200' }}">
