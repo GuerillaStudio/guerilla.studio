@@ -392,12 +392,14 @@ h2 + .header-anchor {
 
 .floating-raccon {
 	float: left;
-	margin-inline: 1ch;
-	margin-block-end: -1ch;
-	margin-inline-start: -1ch;
-	shape-margin: 0.7ch;
-	transform: translateY(0.5em);
-	shape-outside: url(/raccoon-knife-illu.png);
+	margin-inline: 2ch;
+	margin-block-end: -2ch;
+	margin-inline-start: -2ch;
+	shape-margin: 1.4ch;
+	transform: translateY(1em);
+	shape-outside: var(--illu-raccoon-shape-base64);
+	font-size: .5em;
+	text-align: center;
 }
 
 /* Font-face */
@@ -435,6 +437,7 @@ h2 + .header-anchor {
 	font-style: normal;
 	font-display: optional;
 }
+/* Aditional variables */
 
 @font-face {
 	font-family: 'Atkinson Hyperlegible';
@@ -451,4 +454,6 @@ h2 + .header-anchor {
 	font-weight: normal;
 	font-style: italic;
 	font-display: optional;
+:root {
+	--illu-raccoon-shape-base64: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAfCAMAAAB55NVoAAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMA/QYMECIJ8Pj0tYNq6eDFiG5TFdvSzLuumXhjSTk1KKWefldNPufAlHtyWkMe6+NeLhmNpwAmhdIAAAGpSURBVDjLjZTncuMgFEYBgVBvVm9Rde9Z3v/VFpv1rJMgKefXHWYOl6sPAd5Qyv4DSFDHgAApW8ZgpoJvoI4+1mUCshknVZ61qiiqijg4YQ9cmfHBmFAwrr1m46TtrthbhliNZAbW2QN4oTZk32mAjA2bBAZS4zBtREhqrOCk4QEpA5skkwoonjZ0abQWm6GVCEo4Z9iS0QM2Bxx/fqiIzZL+MDwmYW72lc0WMDG/nK+ZMSYGW0LL9n25EkKRb0O2DNyUFfnXpcrpb4zYM7ujCPtEUrbMud3m5V3hgjqYRqgttzB8P99+8iak+rQG015SYLiviYJr3qEIVHQrG1efj8PxgmtBxBsA8M2v/Z1BxV4Uwq+ba88j7RrvDl5UV4T6vGhdjUL74lL6RVhHayeMC6X2R/QyCI98JG1/0CPdjWP6Fg7vl5pmdxhqAlbW/f3lsZrY0eEDjZ7PkAnWSXS5msdDWT0HIG9GZySJu3ESI1kbmWc6QtF2aOiA1QOLABnk5ANwyjAvc9fWNN35w+sRVRjgAEg5YX68m7jKgb+3jur/HxRMoiCwwF/CUp655vbNIgAAAABJRU5ErkJggg==");
 }
