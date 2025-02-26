@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-	--font-family: "Atkinson Hyperlegible", "Atkinson-Fallback", -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family: "Atkinson Hyperlegible Next VF", "Atkinson-Fallback", -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	/* ℹ️ Emoji fonts are explicitely declared at the fontstacks end to be sure to be displayed correctely on every platforms. https://answers.microsoft.com/en-us/windows/forum/all/flag-emoji/85b163bc-786a-4918-9042-763ccf4b6c05 */
 }
@@ -423,37 +423,21 @@ h2 + .header-anchor {
 }
 
 @font-face {
-	font-family: 'Atkinson Hyperlegible';
-	src: local('Atkinson Hyperlegible Regular'), local('AtkinsonHyperlegible-Regular'), url('/fonts/subset-AtkinsonHyperlegible-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
+	font-family: 'Atkinson Hyperlegible Next VF';
+	src:
+		local('Atkinson Hyperlegible Next VF'),
+		local('Atkinson Hyperlegible Next VF Light'),
+		local('AtkinsonHyperlegibleNextVFLight-Light'),
+		url('/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2') format('woff2')
+	;
+	font-weight: 200 800;
+	font-stretch: normal;
+	font-variation-settings: normal;
 	font-display: optional;
 }
 
-@font-face {
-	font-family: 'Atkinson Hyperlegible';
-	src: local('Atkinson Hyperlegible Bold'), local('AtkinsonHyperlegible-Bold'), url('/fonts/subset-AtkinsonHyperlegible-Bold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
-	font-display: optional;
-}
 /* Aditional variables */
 
-@font-face {
-	font-family: 'Atkinson Hyperlegible';
-	src: local('Atkinson Hyperlegible Bold Italic'), local('AtkinsonHyperlegible-BoldItalic'), url('/fonts/subset-AtkinsonHyperlegible-BoldItalic.woff2') format('woff2');
-	font-weight: bold;
-	font-style: italic;
-	font-display: optional;
-}
-
-@font-face {
-	font-family: 'Atkinson Hyperlegible';
-	src: local('Atkinson Hyperlegible Italic'), local('AtkinsonHyperlegible-Italic'), url('/fonts/subset-AtkinsonHyperlegible-Italic.woff2') format('woff2');
-
-	font-weight: normal;
-	font-style: italic;
-	font-display: optional;
 :root {
 	--illu-raccoon-shape-base64: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAfCAMAAAB55NVoAAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMA/QYMECIJ8Pj0tYNq6eDFiG5TFdvSzLuumXhjSTk1KKWefldNPufAlHtyWkMe6+NeLhmNpwAmhdIAAAGpSURBVDjLjZTncuMgFEYBgVBvVm9Rde9Z3v/VFpv1rJMgKefXHWYOl6sPAd5Qyv4DSFDHgAApW8ZgpoJvoI4+1mUCshknVZ61qiiqijg4YQ9cmfHBmFAwrr1m46TtrthbhliNZAbW2QN4oTZk32mAjA2bBAZS4zBtREhqrOCk4QEpA5skkwoonjZ0abQWm6GVCEo4Z9iS0QM2Bxx/fqiIzZL+MDwmYW72lc0WMDG/nK+ZMSYGW0LL9n25EkKRb0O2DNyUFfnXpcrpb4zYM7ujCPtEUrbMud3m5V3hgjqYRqgttzB8P99+8iak+rQG015SYLiviYJr3qEIVHQrG1efj8PxgmtBxBsA8M2v/Z1BxV4Uwq+ba88j7RrvDl5UV4T6vGhdjUL74lL6RVhHayeMC6X2R/QyCI98JG1/0CPdjWP6Fg7vl5pmdxhqAlbW/f3lsZrY0eEDjZ7PkAnWSXS5msdDWT0HIG9GZySJu3ESI1kbmWc6QtF2aOiA1QOLABnk5ANwyjAvc9fWNN35w+sRVRjgAEg5YX68m7jKgb+3jur/HxRMoiCwwF/CUp655vbNIgAAAABJRU5ErkJggg==");
 }

@@ -45,6 +45,8 @@
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 		{# Eleventy ❤︎ #}
 		<meta name="generator" content="{{ eleventy.generator }}">
+		{# Preload font #}
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2" crossorigin />
 
 		{# Inline all the CSS for now (since it's quite small) #}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
