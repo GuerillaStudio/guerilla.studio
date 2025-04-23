@@ -9,13 +9,10 @@ author:
   fedi_nickname: "@tixie@guerilla.studio"
   social_link: "https://mastodon.guerilla.studio/@tixie"
   kofi: "https://ko-fi.com/J3J3F2YAT"
-social_card_url: "/img/social-card-mastodon-media-upload-limits.png"
+social_card_url: "/img/social-card/mastodon-media-upload-limits.png"
 social_card_width: "1200"
 social_card_height: "630"
-twitter_card_type: "summary_large_image"
 ---
-
-{% image "header.png", "", [560, 1120, 'auto'], [560px, 1120px, 1200px] %}
 
 ## File extensions
 
@@ -62,7 +59,7 @@ In case you're wondering:
 2. Add `/about` at the end to access the about page
 3. Scroll at the end where it's should displayed somewhere <sub>*(woaw thanks Tixie for this specific info lol)*</sub>\
 \
-{% image "mastodon-social-about-page-infos.png", "Bottom of mastodon.social/about page with the version (v4.2.0) circled", [560, 1120, 'auto'], [560px, 1120px, 1424px] %}
+![Bottom of mastodon.social/about page with the version (v4.2.0) circled](mastodon-social-about-page-infos.png)
 
 That's it, that's the ~~toot~~ post. Hope it helped.
 

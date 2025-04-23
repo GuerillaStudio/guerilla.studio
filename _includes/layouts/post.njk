@@ -2,15 +2,19 @@
 layout: layouts/base.njk
 ---
 
-{# Only include the syntax highlighter CSS on blog posts #}
-{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
-<div class="post">
-	<div class="post-backLink"><a href="/blog"><span aria-hidden="true">←</span>&nbsp;Back to posts list</a></div>
-	<h1>{{ title }}</h1>
+<style>{% include "style/page-content.css" %}</style>
+<style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 
-	<time class="date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+{% set heroNoIllu = true %}
+{% set heroTitle = title %}
+{% set heroBlogBack = true %}
+{% set heroDate = page.date %}
+{% include "components/hero.njk" %}
 
-	{{ content | safe }}
+<div class="page-content">
+	<div class="page-content:container writing">
+		{{ content | safe }}
 
+		{% include "components/signature.njk" %}
+	</div>
 </div>

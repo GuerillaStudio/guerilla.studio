@@ -1,0 +1,166 @@
+.hero {
+	--border-width: var(--scale--3);
+	--padding-block: calc(var(--scale-0));
+	--padding-inline: calc(var(--scale--2));
+
+	overflow-x: clip;
+	max-width: 100%;
+	margin-bottom: var(--scale-6);
+}
+
+.hero--noillu {
+	margin-bottom: 1lh;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 0;
+	padding-block: calc(var(--border-width) + var(--padding-block));
+	padding-inline: calc(var(--border-width) + var(--padding-inline));
+}
+
+.hero-content::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	right: calc(-1 * (var(--scale-4) + 7%));
+	bottom: -10%;
+	rotate: -10deg;
+	aspect-ratio: 1392 / 864;
+	max-width: 93%;
+	height: 130%;
+	opacity: .4;
+	background: no-repeat url(/img/raccoon-dark.svg);
+	background-position: bottom right;
+	background-size: 100% auto;
+}
+
+.hero--noillu .hero-content::before { display: none; }
+
+.hero-content::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	border: var(--border-width) solid var(--color-brand-2);
+	mix-blend-mode: darken;
+}
+
+/* head
+-------------------------------------------------- */
+
+.hero-head {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	align-items: start;
+	justify-content: space-between;
+	min-height: 7svmin;
+	margin-bottom: 1lh;
+}
+
+
+.hero-head > * {
+	font-size: var(--scale--1);
+}
+
+.hero-head a {
+	text-decoration: underline;
+	text-decoration-color: var(--color-brand-1);
+	text-underline-offset: .1em;
+}
+
+.hero-head a:is(:hover, :active) {
+	text-decoration-thickness: .1em;
+}
+
+.hero-date {
+	margin-inline-start: auto;
+	color: var(--color-dark-3);
+	background-color: var(--color-light-1);
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+.hero-sideLink {
+	margin-inline-start: auto;
+	margin-inline-end: -.25em;
+	padding-inline: .25em;
+	background-color: var(--color-light-1);
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* title
+-------------------------------------------------- */
+
+.hero .title {
+	position: relative;
+	max-width: calc(100% + (var(--border-width) + (var(--padding-inline) * 2)));
+	margin: 0;
+	margin-block-end: .15em;
+	margin-inline-end: calc(-1 * var(--padding-inline));
+	font-size: var(--scale-6);
+	font-weight: 800;
+	line-height: 1.25;
+	text-wrap: balance;
+}
+
+.hero--home .title {
+	margin-block-start: 25svmin;
+	line-height: 1.15;
+	text-transform: uppercase;
+	text-wrap: initial;
+}
+
+@media (max-width: 1000px) {
+	.hero .title {
+		font-size: var(--scale-5);
+	}
+}
+
+@media (max-width: 430px) {
+	.hero .title {
+		font-size: var(--scale-4);
+	}
+}
+
+@media (max-width: 320px) {
+	.hero .title {
+		font-size: var(--scale-3);
+	}
+}
+
+.hero .title span:not([class]) {
+	padding: .15em;
+	color: var(--color-light-2);
+	background-color: var(--color-dark-2);
+	box-decoration-break: clone;
+}
+
+@supports not (box-decoration-break: clone) {
+	.hero .title span:not([class]) {
+		padding-block-end: .07em;
+	}
+}
+
+.hero .title span:not([class]):first-child {
+	margin-inline-start: calc(-1 * (var(--border-width) + (var(--padding-inline) * 2)));
+}
+
+.hero .title span:not([class]) + span:not([class]) {
+	margin-block-start: calc(1 * var(--scale--3));
+}
+
+.hero .title span.secondary {
+	display: block;
+	margin-block-start: calc(var(--padding-inline) * 1.312);
+	font-size: var(--scale--1);
+	font-variation-settings: "ital" .75;
+	font-weight: 800;
+	font-style: italic;
+	line-height: 1.1em;
+	text-shadow: .05em .05em 0 var(--color-light-1);
+	text-transform: initial;
+	letter-spacing: -.01em;
+}

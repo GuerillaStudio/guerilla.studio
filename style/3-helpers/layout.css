@@ -1,0 +1,20 @@
+/* -------------------------------------------------
+== Layout helpers
+-------------------------------------------------- */
+
+.static { position: static !important; }
+.sticky { position: sticky !important; }
+.relative { position: relative !important; }
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.inline { display: inline !important; }
+.flex { display: flex !important; }
+.inline-flex { display: inline-flex !important; }
+.justify-center { justify-content: center !important; }
+.align-items-center { align-items:center !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.justify-self-auto { justify-self: auto !important; }
+.justify-self-stretch { justify-self: stretch !important; }
+.justify-self-center { justify-self: center !important; }
+.justify-self-start { justify-self: start !important; }
+.justify-self-end { justify-self: end !important; }

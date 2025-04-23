@@ -1,58 +1,113 @@
 ---
 layout: layouts/base.njk
-eleventyNavigation:
-  key: About
-  order: 1
+title: "Guérilla.Studio"
 ---
 
-<h1><span aria-hidden="true">∴&nbsp;</span>Independent Web Software</h1>
-<p class="slogan">by a small collective of cross-disciplinary web experts</p>
+<style>{% include "style/page-home.css" %}</style>
 
-<div class="announce">
-	<img
-		class="floating-raccon"
-		src="/raccoon-knife-illu.png"
-		srcset="/raccoon-knife-illu.png 1x, /raccoon-knife-illu@2x.png 2x"
-		width="100"
-		height="71"
-		alt="A raccoon holding a switchblade in its mouth"
-	>
-	We gave our website to raccoons in need of material to throw at anti-riot police, so this is just what we have for now.<br> We're gonna build another website later, it's okay, always fuck the police first!&nbsp;✊
+<div class="hero hero--home">
+	<div class="container">
+		<div class="hero-content">
+			<h1 class="title">
+				<span>Independent</span><br><span>Web Software</span>
+				<span class="secondary">by a small team of cross-disciplinary web experts</span>
+			</h1>
+		</div>
+	</div>
+</div>
+<!-- About -->
+<section class="page-home:section container">
+	<div class="page-home:section_title">
+		<h2 id="about">Who we are</h2>
+		<a class="anchor" href="#about">
+			<span aria-hidden="true">∴</span>
+			<span class="visually-hidden">Section titled Who we are</span>
+		</a>
+	</div>
+
+	<article class="page-home:studio mb-section">
+		<h3 class="page-home:studio_tagline title-1">A small french studio by two spiky women <span class="subtitle">to craft great website & software</span></h3>
+		<div class="page-home:members">
+			<div class="page-home:member">
+				<span class="pic">
+					<img eleventy:ignore src="/img/tixie.png" srcset="/img/tixie.png 1x, /img/tixie@2x.png 2x, /img/tixie@3x.png 3x" width="185" height="243" alt="">
+				</span>
+				<div class="content">
+					<div class="name">Tixie</div>
+					<p class="bio">Interface designer &amp; frontend developer in love with CSS big time</p>
+					<div class="links">
+						<a href="https://tixie.name">Homepage</a>
+						<a href="https://mastodon.guerilla.studio/@tixie">Mastodon</a>
+					</div>
+				</div>
+			</div>
+			<div class="page-home:member">
+				<span class="pic">
+					<img eleventy:ignore src="/img/milia.png" srcset="/img/milia.png 1x, /img/milia@2x.png 2x, /img/milia@3x.png 3x" width="185" height="243" alt="">
+				</span>
+				<div class="content">
+					<div class="name">Milia</div>
+					<p class="bio">Fullstack web developer passionate about statically typed languages</p>
+					<div class="links">
+						<a href="https://wryk.moe">Homepage</a>
+						<a href="https://mastodon.guerilla.studio/@milia">Mastodon</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article class="layout-12 mb-section relative">
+		<h3 class="title-1 sticky">Create quality for the web</h3>
+		<div class="writing text-big">
+			<p>We believe the web to be an amazing platform to express, connect and create in diverse ways.</p>
+			<p>But we are not delusional about technology being a magical thing who would fulfill & liberate humanity.</p>
+			<p>That&rsquo;s why we are focusing on <strong>web quality</strong>, <strong>accessibility</strong>, <strong>privacy</strong> and <strong>maintainability</strong> to deliver the more <strong>ethical</strong> human-sized projects possible.<br>We do what we think is right and without bullshit.</p>
+			<p>Along with that we&rsquo;re helping other organizations embracing those values one radical step at a time.</p>
+			<p>And some times we just do projects for fun!</p>
+		</div>
+	</article>
+</section>
+
+<div class="mt-section2 mb-section2 md:mt-section md:mb-section">
+	{% include "components/marquee.njk" %}
 </div>
 
-<section>
-	<h2 id="about">Mission</h2>
-	<p>We are not delusional about technology being a magical thing who will fulfill &amp; liberate humanity.</p>
-	<p>That’s why we are focusing on <strong>web quality</strong>, <strong>accessibility</strong>, <strong>privacy</strong> and <strong>maintainability</strong> to deliver the more <strong>ethical</strong> human-sized projects possible.<br>
-	We do what we think is right and without bullshit.</p>
-	<p>Along with that we’re helping other organizations embracing those values one radical step at a time.</p>
-	<p>And some times we just do projects for fun!</p>
-</section>
+<!-- Work -->
+<section class="page-home:section container mt-section">
+	<div class="page-home:section_title">
+		<h2 id="work">Our work</h2>
+		<a class="anchor" href="#work">
+			<span aria-hidden="true">∴</span>
+			<span class="visually-hidden">Section titled Our work</span>
+		</a>
+	</div>
 
-<section>
-	<h2 id="projects">Our tools/projects</h2>
-	Most of the sources are available on our <span aria-hidden="true">🐙&#8239;</span><a href="https://github.com/GuerillaStudio">GitHub</a> (and mirrored on <a href="https://git.deuxfleurs.fr/GuerillaStudio">Deufleurs forge</a>):</p>
-	<ul>
-		<li><a href="https://placehold.in">Placehold.in</a>&nbsp;— A Simple Image Placeholder</li>
-		<li><a href="https://compteurdegreve.fr">CompteurDeGreve.fr</a>&nbsp;— An independent participation counter for the french strike of March 7th 2023 against the pension reform(/destruction)</li>
-		<li><a href="https://souvenir.cam">Souvenir</a>&nbsp;— Capture few seconds of your webcam/camera and generate a gif</li>
-		<li><a href="https://radio.eldritch.cafe">Eldritch Radio</a>&nbsp;— A Mastodon based music webradio</li>
-		<li><a href="https://vanillalist.top">Vanilla List</a>&nbsp;— A vanilla JavaScript plugins repository</li>
-		<li><a href="https://music.guerilla.studio">Now Playing</a>&nbsp;— A collection of handpicked music albums we like</li>
-		<li><a href="https://inspiration.guerilla.studio">Moodblog</a>&nbsp;— An unorganized patchwork from our graphic researches</li>
-	</ul>
-</section>
+	<article class="layout-12 mb-section">
+		<h3 class="title-1">Non-profits we work with<span class="visually-hidden">:</span> <span class="subtitle">Organizations we currently support in their mission</span></h3>
+		<ul class="page-home:projects">
+			<li class="page-home:project">
+				<div class="page-home:project_logo">{% include "logo-deuxfleurs.svg" %}</div>
+				<a class="page-home:project_name" href="https://deuxfleurs.fr">Deuxfleurs</a>
+				<p class="page-home:project_abstract">Offers web-hosting without datacenter and using only consumer-grade refurbished hardware</p>
+			</li>
+			<li class="page-home:project">
+				<div class="page-home:project_logo">{% include "logo-flora.svg" %}</div>
+				<a class="page-home:project_name" href="https://flora.pm">Flora.pm</a>
+				<p class="page-home:project_abstract">An alternative Haskell package index with the goal of improving developer experience for the ecosystem</p>
+			</li>
+		</ul>
+	</article>
 
-<section>
-	<h2 id="social">Find us elsewhere</h2>
-	<p>Free to follow what we say on social platforms:</p>
-	<ul>
-		<li><span aria-hidden="true">🐘&nbsp;</span><a href="https://mastodon.guerilla.studio/@GuerillaHQ" rel="me">Mastodon</a></li>
-		<li><span aria-hidden="true">🦋&nbsp;</span><a href="https://bsky.app/profile/guerilla.studio">Bluesky</a></li>
-		<li><span aria-hidden="true">📷&nbsp;</span><a href="https://instagram.com/Guerilla.Studio_">Instagram</a></li>
-	</ul>
-	<p>
-		Or on our own personal <span aria-hidden="true">🐘&nbsp;</span>Mastodon accounts:
-		<a href="https://mastodon.guerilla.studio/@milia" rel="me">Milia</a> &amp; <a href="https://mastodon.guerilla.studio/@tixie" rel="me">Tixie</a>.
-	</p>
+	<article class="layout-12 mb-section2">
+		<h3 class="title-1 sticky">Our own projects<span class="visually-hidden">, </span> <span class="subtitle text-balance sm:text-wrap">Sources available on <a href="https:/github.com/GuerillaStudio">Github</a> and <a href="https://git.deuxfleurs.fr/GuerillaStudio">Deuxfleurs forge</a></span></h3>
+		<ul class="page-home:projects">
+			{% for project in projects %}
+			<li class="page-home:project">
+				<a class="page-home:project_name" href="{{ project.url }}">{{ project.name}}</a>
+				<p class="page-home:project_abstract">{{ project.abstract }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</article>
+
 </section>

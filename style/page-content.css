@@ -1,0 +1,92 @@
+/* -------------------------------------------------
+== Content page (prefix: "page-content:")
+-------------------------------------------------- */
+
+.page-content\:container {
+	--content-start-large: calc(((var(--container)*.69) - var(--container--medium)) / 2);
+	--content-start-main: calc(var(--container--medium) / 2);
+
+	display: grid;
+	grid-template-columns:
+		[full-start] var(--container-gap)
+		[wide-start] minmax(0, 1fr)
+		[large-start] clamp(0px, calc(50vw - var(--content-start-main)), var(--content-start-large))
+		[main-start] minmax(auto, var(--content-start-main))
+		[center]
+		minmax(auto, var(--content-start-main)) [main-end]
+		clamp(0px, calc(50vw - var(--content-start-main)), var(--content-start-large)) [large-end]
+		minmax(0, 1fr) [wide-end]
+		var(--container-gap) [full-end];
+	row-gap: 1em;
+	padding-bottom: var(--scale-4);
+
+}
+
+.page-content\:container > * {
+	grid-column: main;
+	margin-block: 0;
+}
+
+.page-content\:container > [data-size="large"] {
+	grid-column: large;
+}
+
+.page-content\:container > [data-size="wide"] {
+	grid-column: wide;
+}
+
+.page-content\:container > [data-size="full"] {
+	grid-column: full;
+}
+
+.page-content\:container > p:has(:is(img:only-child, picture:only-child)) {
+	display: contents;
+}
+
+.page-content\:container > p:has(:is(img:only-child, picture:only-child)) :is(picture, img) {
+	grid-column: large;
+}
+
+.page-content\:container pre[class*="language-"] {
+	grid-column: large;
+}
+
+.page-content hr {
+	margin-block: 1lh;
+}
+
+.page-content h2 { font-size: var(--scale-3); }
+.page-content h3 { font-size: var(--scale-2); }
+.page-content h4 { font-size: var(--scale-1); }
+.page-content h5 { font-size: var(--scale-0); }
+
+/* Page signature
+-------------------------------------------------- */
+
+.page-content\:signature {
+	padding-block-start: 2em;
+	font-size: var(--scale--1);
+	font-variation-settings: "ital" .75;
+	font-style: italic;
+	color: var(--color-dark-3);
+}
+
+.page-content\:signature strong {
+	color: var(--color-dark-1);
+}
+
+.page-content\:signature a {
+	color: var(--color-dark-1);
+}
+
+.page-content\:signature-links {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+@media (--screen-sm) {
+	.page-content h2 { font-size: var(--scale-2); }
+	.page-content h3 { font-size: var(--scale-1); }
+	.page-content h4 { font-size: var(--scale-0); }
+	.page-content h5 { font-size: var(--scale--1); }
+}

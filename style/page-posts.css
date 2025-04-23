@@ -1,0 +1,53 @@
+/* -------------------------------------------------
+== Blog index page (prefix: "page-posts:")
+-------------------------------------------------- */
+
+
+.page-posts\:list {
+	counter-reset: reversed(posts);
+	margin: 0;
+	padding: 0;
+}
+
+.page-posts\:item {
+	display: flex;
+	flex-direction: column;
+	gap: var(--scale--6) 0;
+}
+
+.page-posts\:item:not(:last-child) {
+	margin-bottom: var(--scale-3);
+	padding-bottom: var(--scale-3);
+	border-bottom: .2em dotted hsl(var(--color-hue-primary) 5% 75%);
+}
+
+
+.page-posts\:name {
+	font-size: var(--scale-3);
+	font-variation-settings: "ital" .75;
+	font-weight: 800;
+	line-height: 1.1;
+	color: var(--color-dark-2);
+	letter-spacing: -0.02em;
+}
+
+.page-posts\:name:any-link {
+	text-decoration: none;
+}
+
+.page-posts\:name:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--color-brand-1);
+	text-decoration-thickness: .08em;
+	text-underline-offset: .1em;
+}
+
+.page-posts\:abstract {
+	font-variation-settings: "ital" .75;
+	font-style: italic;
+}
+
+.page-posts\:date {
+	font-size: var(--scale--1);
+	color: var(--color-dark-3);
+}

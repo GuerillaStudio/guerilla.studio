@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Placehold.in",
+    "url": "https://placehold.in",
+    "abstract": "Our own simple image placeholder service with serverless functions"
+  },
+  {
+    "name": "CompteurDeGreve.fr",
+    "url": "https://web.archive.org/web/20230330094830/https://www.compteurdegreve.fr/",
+    "abstract": "An independent participation counter for the french strike of March 7th 2023 against the pension reform(/destruction)"
+  },
+  {
+    "name": "Eldritch Radio",
+    "url": "https://radio.eldritch.cafe",
+    "abstract": "A Mastodon based music webradio"
+  },
+  {
+    "name": "Souvenir",
+    "url": "https://souvenir.cam",
+    "abstract": "Capture few seconds of your webcam/camera and generate a gif directly in a (progressive) web app"
+  },
+  {
+    "name": "Vanilla List",
+    "url": "https://vanillalist.top",
+    "abstract": "A vanilla JavaScript plugins repository"
+  },
+  {
+    "name": "Now Playing",
+    "url": "https://music.guerilla.studio",
+    "abstract": "A collection of handpicked music albums we like"
+  }
+]

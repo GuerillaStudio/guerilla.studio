@@ -1,0 +1,15 @@
+/* -------------------------------------------------
+== Typography helpers
+-------------------------------------------------- */
+
+.text-center { text-align: center !important; }
+
+.text-underline { text-decoration: underline !important; }
+
+.text-big { font-size: 1.2em !important; }
+
+.text-balance { text-wrap: balance !important; }
+
+@media (--screen-sm) {
+	.sm\:text-wrap { text-wrap: wrap !important; }
+}

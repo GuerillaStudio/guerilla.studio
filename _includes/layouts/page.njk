@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+
+<style>{% include "style/page-content.css" %}</style>
+
+{% include "components/hero.njk" %}
+
+<div class="page-content">
+	<div class="page-content:container writing">
+		{{ content | safe }}
+	</div>
+</div>

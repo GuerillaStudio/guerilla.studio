@@ -1,0 +1,20 @@
+<div class="hero{%if heroNoIllu%} hero--noillu{%endif%}">
+	<div class="container">
+		<div class="hero-content">
+			<div class="hero-head">
+				{% if heroBlogBack %}
+				<div><span aria-hidden="true">←</span>&nbsp;<a href="/blog">Back to posts list</a></div>
+				{% endif %}
+				{% if heroRSSLink %}
+				<div class="hero-sideLink"><a href="/feed/feed.xml">RSS feed</a></div>
+				{% endif %}
+				{% if heroDate %}
+				<time class="hero-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+				{% endif %}
+			</div>
+			<h1 class="title">
+				<span>{{ heroTitle or title }}</span>
+			</h1>
+		</div>
+	</div>
+</div>

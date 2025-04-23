@@ -24,10 +24,7 @@ function eleventyComputedExcludeFromCollections() {
 	}
 };
 
-module.exports.eleventyComputedPermalink = eleventyComputedPermalink;
-module.exports.eleventyComputedExcludeFromCollections = eleventyComputedExcludeFromCollections;
-
-module.exports = eleventyConfig => {
+export default (eleventyConfig) => {
 	eleventyConfig.addGlobalData("eleventyComputed.permalink", eleventyComputedPermalink);
 	eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", eleventyComputedExcludeFromCollections);
 
@@ -42,7 +39,7 @@ module.exports = eleventyConfig => {
 
 		// Only log once.
 		if(!logged) {
-			console.log( `[guerilla-studio-blog] ${text} drafts.` );
+			console.log( `[guerilla-studio] ${text} drafts.` );
 		}
 
 		logged = true;

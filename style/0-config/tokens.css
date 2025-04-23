@@ -1,0 +1,53 @@
+:root {
+	/* ℹ️ Notes
+		1. Emoji fonts are explicitely declared at the fontstacks end to be sure to be displayed correctely on every platforms. https://answers.microsoft.com/en-us/windows/forum/all/flag-emoji/85b163bc-786a-4918-9042-763ccf4b6c05
+	*/
+
+	/* Fluid scales
+	-------------------------------------------------- */
+
+	/* OLD @link https://utopia.fyi/type/calculator?c=320,16,1.2,2000,40,1.2,6,6,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,2000,33,1.25,6,6,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--scale--6: clamp(0.3349rem, 0.2957rem + 0.196vw, 0.5407rem);
+	--scale--5: clamp(0.4019rem, 0.3497rem + 0.2609vw, 0.6758rem);
+	--scale--4: clamp(0.4823rem, 0.4132rem + 0.3453vw, 0.8448rem);
+	--scale--3: clamp(0.5787rem, 0.4878rem + 0.4546vw, 1.056rem);
+	--scale--2: clamp(0.6944rem, 0.5753rem + 0.5958vw, 1.32rem);
+	--scale--1: clamp(0.8333rem, 0.6778rem + 0.7778vw, 1.65rem);
+	--scale-0: clamp(1rem, 0.7976rem + 1.0119vw, 2.0625rem);
+	--scale-1: clamp(1.2rem, 0.9375rem + 1.3125vw, 2.5781rem);
+	--scale-2: clamp(1.44rem, 1.1004rem + 1.6978vw, 3.2227rem);
+	--scale-3: clamp(1.728rem, 1.2898rem + 2.1908vw, 4.0283rem);
+	--scale-4: clamp(2.0736rem, 1.5094rem + 2.8208vw, 5.0354rem);
+	--scale-5: clamp(2.4883rem, 1.7634rem + 3.6247vw, 6.2943rem);
+	--scale-6: clamp(2.986rem, 2.0561rem + 4.6494vw, 7.8678rem);
+
+	/* Typography
+	-------------------------------------------------- */
+
+	--fontstack-sans: "Atkinson Hyperlegible Next VF", "Atkinson-Fallback", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif, var(--fontstack-emoji);
+	--font-family-monospace: consolas, Menlo, monaco, andale mono wt, andale mono, lucida console, lucida sans typewriter, dejavu sans mono, bitstream vera sans mono, liberation mono, nimbus mono l, courier new, courier, monospace, var(--fontstack-emoji);
+	--fontstack-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--base-font: var(--scale-0);
+	--base-lh: 1.4;
+
+	/* Container
+	-------------------------------------------------- */
+	--container: 98.875rem;
+	--container--medium: 60rem;
+	--container-gap: var(--scale-0);
+	/* Layout communs
+	-------------------------------------------------- */
+	--layout-gap: var(--scale-2);
+	/* Content section
+	-------------------------------------------------- */
+	--section-gap: var(--scale-6);
+
+	/* Media queries
+	-------------------------------------------------- */
+
+	@custom-media --screen-md (max-width: 768px);
+	@custom-media --screen-md--reverse (min-width: 768px);
+	@custom-media --screen-sm (max-width: 400px);
+	@custom-media --screen-sm--reverse (min-width: 400px);
+}

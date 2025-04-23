@@ -1,0 +1,15 @@
+:root {
+	--color-hue-primary: 350;
+
+	--color-light-1: hsl(40 26% 89%);
+	--color-light-2: hsl(40 26% 94%);
+
+	--color-dark-1: hsl(var(--color-hue-primary) 6% 20%);
+	--color-dark-2: hsl(var(--color-hue-primary) 15% 5%);
+	--color-dark-3: hsl(var(--color-hue-primary) 5% 30%);
+	--color-dark-4: hsl(var(--color-hue-primary) 5% 45%);
+
+	--color-brand-1: hsl(var(--color-hue-primary) 83% 54%);
+	--color-brand-2: hsl(var(--color-hue-primary) 100% 58%);
+	--color-brand-3: hsl(var(--color-hue-primary) 97% 56%);
+}

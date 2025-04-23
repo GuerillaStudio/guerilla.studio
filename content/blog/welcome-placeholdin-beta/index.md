@@ -9,6 +9,9 @@ author:
   fedi_nickname: "@tixie@guerilla.studio"
   social_link: "https://mastodon.guerilla.studio/@tixie"
   kofi: "https://ko-fi.com/J3J3F2YAT"
+social_card_url: "/img/social-card/placeholdin-beta.png"
+social_card_width: "1236"
+social_card_height: "895"
 ---
 
 **Now available at <span aria-hidden="true">→</span>&nbsp;[https://placehold.in](https://placehold.in?from=guerillablog)**
@@ -34,7 +37,7 @@ It’s the kind without photos (unlike [Lorem Picsum](https://picsum.photos/)), 
 
 All that to easily be sure the right image is showing when you want to.
 
-{% image "./placeholdin-url-example.png", "https://placehold.in/560x200@1x.svg/dark", [560, 1120, 'auto'], [560px, 1120px, 1404px] %}
+![https://placehold.in/560x200@1x.svg/dark](./placeholdin-url-example.png)
 
 would for example render this:\
 \

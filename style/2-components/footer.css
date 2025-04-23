@@ -1,0 +1,134 @@
+.footer {
+	margin-top: var(--scale-6);
+	color: var(--color-light-1);
+	background-color: var(--color-dark-2);
+}
+
+/* Contact section
+-------------------------------------------------- */
+
+.footer-contact {
+	padding-block: var(--scale-5);
+	text-align: center;
+}
+
+.footer-contact_title {
+	margin-block: var(--scale-2);
+	font-size: var(--scale-6);
+	font-variation-settings: "ital" .75;
+	font-weight: 800;
+	font-style: italic;
+	line-height: 1.1;
+	letter-spacing: -.03em;
+}
+
+.footer-contact_title .colored {
+	color: var(--color-brand-3);
+}
+
+.footer-contact_links {
+	display: flex;
+	flex-direction: column;
+	gap: var(--scale--2);
+	align-items: center;
+	margin-top: var(--scale-2);
+}
+
+:where(.footer-contact_links),
+:where(.footer-contact_links) li {
+	margin: 0;
+	padding: 0;
+	font-size: var(--scale-1);
+	list-style-type: none;
+}
+
+.footer-contact_links a {
+	text-transform: lowercase;
+}
+
+.footer-contact_links a:hover {
+	text-decoration-thickness: .1em;
+}
+
+.footer-contact_links a[href^="http"]::after {
+	content: '↗' / '';
+	position: absolute;
+	margin-top: .5cap;
+	margin-left: .1ch;
+	font-family: system-ui;
+	font-size: .5em;
+	vertical-align: super;
+	transition: .1s transform;
+}
+
+.footer-contact_links a[href^="http"]:where(:hover)::after {
+	transform: translate(.25em, -.25em);
+}
+
+
+/* Footer's footer section (lol)
+-------------------------------------------------- */
+
+.footer-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--scale--1);
+	justify-content: space-between;
+	padding-top: var(--scale-3);
+	padding-bottom: var(--scale-5);
+	font-size: var(--scale--2);
+	text-align: center;
+}
+
+@media (--screen-md) {
+	.footer-bottom {
+		flex-direction: column;
+	}
+}
+
+.footer-bottom a:hover {
+	text-decoration-thickness: .1em;
+}
+
+.footer-bottom a[href^="http"] {
+	padding-inline-end: .5em;
+}
+
+.footer-bottom a[href^="http"]::after {
+	content: '↗' / '';
+	position: absolute;
+	margin-block-start: .25cap;
+	margin-inline-start: .5ch;
+	font-family: system-ui;
+	font-size: .5em;
+	vertical-align: super;
+	transition: .1s transform;
+}
+
+.footer-bottom a[href^="http"]:where(:hover)::after {
+	transform: translate(.25em, -.25em);
+}
+
+/* Raccoon sticker
+-------------------------------------------------- */
+
+.footer-sticker {
+	position: absolute;
+	left: 0;
+	transform: translateY(-55%);
+}
+
+.footer-sticker img {
+	touch-action: none;
+	user-select: none;
+	width: calc(3 * var(--scale-5));
+	filter: drop-shadow(0 .1875rem .1875rem hsl(0 0 5% / .54));
+	transition: .2s transform;
+}
+
+.footer-sticker img:hover {
+	transform: translateY(-.08em);
+}
+.footer-sticker img:active {
+	transform: translateY(.05em) scale(.95);
+}

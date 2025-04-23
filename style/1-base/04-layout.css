@@ -1,0 +1,34 @@
+.container {
+	--_c-size: var(--container);
+	/* width: calc(100% - (var(--container-gap)*2)); */
+	width: 100%;
+	max-width: calc(var(--_c-size) + (var(--container-gap)*2));
+	margin-inline: auto;
+	padding-inline: var(--container-gap);
+}
+
+.container--medium { --_c-size: var(--container--medium); }
+
+/* Layout 1-2
+-------------------------------------------------- */
+
+.layout-12 {
+	display: flex;
+	gap: var(--layout-gap);
+	align-items: flex-start;
+}
+
+.layout-12 > :first-child {
+	flex-shrink: 0;
+	width: calc(100% / 3);
+}
+
+@media (--screen-md) {
+	.layout-12 {
+		flex-direction: column;
+	}
+	.layout-12 > :nth-child(n) {
+		width: 100%;
+		max-width: 100%;
+	}
+}

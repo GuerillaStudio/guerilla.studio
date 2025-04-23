@@ -1,81 +1,67 @@
-<!doctype html>
-<html lang="{{ metadata.language }}">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title or metadata.title }}</title>
 
-		<title>{{ title or metadata.title }}</title>
+	<link rel="preload" href="/img/raccoon-dark.svg" as="image" type="image/svg+xml" fetchpriority="high"/>
+	<link rel="preload" href="/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2" as="font" type="font/woff2" crossorigin>
 
-		<meta name="description" content="{{ description or metadata.description }}">
-		<meta itemprop="description" content="{{ description or metadata.description }}">
+	{% include "components/metatags.njk" %}
+	<link rel="canonical" href="{{ page.url | absoluteUrl }}" />
 
-		<meta name="author" content="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
-		<meta itemprop="author" content="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
-		<link rel="author" href="{%- if author %}{{ author }}{% else %}{{ metadata.author.name }}{% endif %}">
-		<meta name="fediverse:creator" content="{%- if author and author.fedi_nickname %}{{ author.fedi_nickname }}{% else %}{{ metadata.author.fedi_nickname }}{% endif %}"/>
+	{#- Atom feed #}
+	<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0e0e0e">
+	<style>{% include "style/base.css" %}</style>
+	<style>{% getBundle "css" %}</style>
 
-		<meta name="msapplication-TileColor" content="#0e0e0e">
-		<meta name="theme-color" content="#cf173f">
-
-		{# General OG tags #}
-		<meta property="og:image:width" content="{{ social_card_width or '1200' }}">
-		<meta property="og:image:height" content="{{ social_card_height or '650' }}">
-		<meta property="og:description" content="{{ description or metadata.description }}">
-		<meta property="og:title" content="{{ title or metadata.title }}">
-		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-		<meta property="og:image" content="{{ metadata.url }}{{ (social_card_url or '/og-image-02.png') }}">
-		{%- if layout !== "layouts/post.njk" %}
-		<meta property="og:type" content="website">
-		{% endif %}
-		{# Blog post OG tags #}
-		{%- if layout === "layouts/post.njk" %}
-		<meta property="og:type" content="article">
-		<meta property="article:author" content="{%- if author and author.name %}{{ author.name }}{% else %}{{ metadata.author.name }}{% endif %}">
-		<meta property="article:published_time" content="{{ date.toISOString() }}">
-		{% endif %}
-
-		{#- Atom and JSON feeds #}
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-		{# Eleventy ❤︎ #}
-		<meta name="generator" content="{{ eleventy.generator }}">
-		{# Preload font #}
-		<link rel="preload" as="font" type="font/woff2" href="/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2" crossorigin />
-
-		{# Inline all the CSS for now (since it's quite small) #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		<style>{% getBundle "css" %}</style>
-		{# <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
-	</head>
-	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
-		<header class="header container">
-			<a class="logo" href="/" aria-label="Home" title="Home">
-				{% include "logo-inline.njk" %}
-			</a>
-			<nav aria-label="Top level navigation menu">
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
+</head>
+<body>
+	{% include "components/skip-links.njk" %}
+	<header class="header container">
+		<a href="/" class="header-logo" aria-label="Home">{% include "logo.svg" %}</a>
+		<nav class="header-nav">
+			<ul role="list">
+				{% for entry in navigation %}
+				<li>
+					<a
+						href="{{ entry.url }}"
+						class="{% if entry.url | isCurrentOrParent %}current{%endif%}"
+						{% if entry.url | isCurrent %}aria-current="page"{%endif%}
+					>{{ entry.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+	<main id="main">
+		{{ content | safe }}
+	</main>
+	<footer class="footer">
+		<div class="container relative">
+			<div class="footer-sticker">
+				<img eleventy:ignore src="/img/sticker-raccoon.svg" alt="" loading="lazy">
+			</div>
+			<div class="footer-contact" id="contact">
+				<h2 class="footer-contact_title">Wanna say <span class="colored">hi</span>?</h2>
+				<ul class="footer-contact_links" role="list">
+					<li><a href="mailto:hi@guerilla.studio">hi@guerilla.studio</a></li>
+					<li><a href="https://mastodon.guerilla.studio/@GuerillaHQ" rel="me">Mastodon</a></li>
+					<li><a href="https://bsky.app/profile/guerilla.studio">BlueSky</a></li>
+					<li><a href="https://www.instagram.com/guerilla.studio_/">Instagram</a></li>
 				</ul>
-			</nav>
-		</header>
-
-		<main id="skip" class="main container">
-			{{ content | safe }}
-		</main>
-
-		<footer class="footer">
-			{% include "footer-signature.njk" %}
-		</footer>
-		<script type="module" src="/is-land.js"></script>
-	</body>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-bottom_side">
+					© Guérilla.Studio · <a href="/legal">Legal &amp; Credits</a>
+				</div>
+				<div class="footer-bottom_side">
+					Site <a href="https://github.com/GuerillaStudio/guerilla.studio">source</a> under <a href="https://github.com/GuerillaStudio/guerilla.studio/blob/main/LICENSE">“I'm so tired”</a> license
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>

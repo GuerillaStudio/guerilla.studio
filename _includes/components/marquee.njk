@@ -1,0 +1,24 @@
+<div class="marquee">
+	<div class="track">
+		<div class="train">
+		{% for slogan in slogans %}
+			<div class="wagon">{{ slogan | safe }}</div>
+		{% endfor %}
+		</div>
+		<div class="train" aria-hidden="true">
+		{% for slogan in slogans %}
+			<div class="wagon">{{ slogan | safe }}</div>
+		{% endfor %}
+		</div>
+		<div class="train"  aria-hidden="true">
+		{% for slogan in slogans %}
+			<div class="wagon">{{ slogan | safe }}</div>
+		{% endfor %}
+		</div>
+		<div class="train" aria-hidden="true">
+		{% for slogan in slogans %}
+			<div class="wagon">{{ slogan | safe }}</div>
+		{% endfor %}
+		</div>
+	</div>
+</div>

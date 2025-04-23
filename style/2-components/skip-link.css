@@ -1,0 +1,26 @@
+/* -------------------------------------------------
+== Skip to anchor link for quick keyboard navigation
+-------------------------------------------------- */
+
+.skip-links {
+	position: absolute;
+	z-index: 1001;
+	top: .1em;
+	left: .2em;
+	font-size: 1rem;
+	color: var(--color-light-2);
+	text-align: center;
+	background-color: var(--color-dark-2);
+}
+
+.skip-links a:focus {
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em;
+}
+
+.skip-links a:not(:focus) {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}

@@ -1,0 +1,31 @@
+/* -------------------------------------------------
+== Space helpers
+-------------------------------------------------- */
+
+.mt1 { margin-top: 1rem !important; }
+.mt2 { margin-top: 2rem !important; }
+
+.mt-section { margin-top: var(--section-gap) !important; }
+.mb-section { margin-bottom: var(--section-gap) !important; }
+.pt-section { padding-top: var(--section-gap) !important; }
+.pb-section { padding-bottom: var(--section-gap) !important; }
+.mt-section2 { margin-top: calc(2 * var(--section-gap)) !important; }
+.mb-section2 { margin-bottom: calc(2 * var(--section-gap)) !important; }
+.pt-section2 { padding-top: calc(2 * var(--section-gap)) !important; }
+.pb-section2 { padding-bottom: calc(2 * var(--section-gap)) !important; }
+
+@media (--screen-md) {
+	.md\:mt-section { margin-top: var(--section-gap) !important; }
+	.md\:mb-section { margin-bottom: var(--section-gap) !important; }
+}
+
+/* Gaps
+-------------------------------------------------- */
+
+.gap { gap: var(--gap) !important; }
+.gap--mini { gap: var(--gap-mini) !important; }
+
+/* Border
+-------------------------------------------------- */
+
+.border-0 { border-width: 0 !important;}

@@ -1,0 +1,10 @@
+html, body {
+	color: var(--color-dark-1);
+	background-color: var(--color-light-1);
+}
+
+/* small gap on top of anchored sections scroll scrolled to */
+:where(*) {
+	scroll-margin-top: 1lh;
+	outline-offset: .15rem;
+}

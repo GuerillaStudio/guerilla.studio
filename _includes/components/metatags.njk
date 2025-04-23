@@ -1,0 +1,40 @@
+
+<meta name="description" content="{{ description or metadata.description }}">
+<meta itemprop="description" content="{{ description or metadata.description }}">
+
+<meta name="author" content="{%- if author and author.name %}{{ author.name }}{% else %}{{ metadata.author.name }}{% endif %}">
+<meta itemprop="author" content="{%- if author and author.name %}{{ author.name }}{% else %}{{ metadata.author.name }}{% endif %}">
+<meta name="fediverse:creator" content="{%- if author and author.fedi_nickname %}{{ author.fedi_nickname }}{% else %}{{ metadata.author.fedi_nickname }}{% endif %}"/>
+
+<meta property="og:image:width" content="{{ social_card_width or '1200' }}">
+<meta property="og:image:height" content="{{ social_card_height or '650' }}">
+<meta property="og:description" content="{{ description or metadata.description }}">
+<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:url" content="{{ page.url | absoluteUrl }}">
+<meta property="og:site_name" content="Guérilla Studio">
+<meta property="og:image" content="{{ (social_card_url or metadata.social_card.url) | absoluteUrl }}">
+<meta property="og:image:alt" content="{{ social_card_alt or metadata.social_card.alt }}">
+{%- if layout !== "layouts/post.njk" %}
+<meta property="og:type" content="website">
+{% endif %}
+{# Blog post OG tags #}
+{%- if layout === "layouts/post.njk" %}
+<meta property="og:type" content="article">
+<meta property="article:author" content="{%- if author and author.name %}{{ author.name }}{% else %}{{ metadata.author.name }}{% endif %}">
+<meta property="article:published_time" content="{{ date.toISOString() }}">
+{% endif %}
+
+
+{# Eleventy ❤︎ #}
+<meta name="generator" content="{{ eleventy.generator }}">
+
+{# Favicons and branding shit #}
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Guérilla.Studio" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="color-scheme" content="light dark">
+{# <meta name="theme-color" content="#EB2749"> #}

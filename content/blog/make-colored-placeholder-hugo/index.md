@@ -1,5 +1,6 @@
 ---
 title: How to make colored placeholder on Hugo
+description: "A way to generate a colored placeholder for images with a little trick"
 date: 2020-03-17T18:41:53.010Z
 author:
   name: "Tixie Salander"
@@ -8,13 +9,16 @@ author:
   fedi_nickname: "@tixie@guerilla.studio"
   social_link: "https://mastodon.guerilla.studio/@tixie"
   kofi: "https://ko-fi.com/J3J3F2YAT"
+social_card_url: "/img/social-card/colored-placeholder-music-albums.gif"
+social_card_width: "584"
+social_card_height: "551"
 ---
 
 While using [Hugo](https://gohugo.io/) as a static site generator, I've found a way to generate a colored placeholder with a little trick.
 
 I used it on my [music sharing website](https://music.guerilla.studio/) for example:
 
-<img src="/img/colored-placeholder-music-albums.gif" alt="colored placeholder example">
+![colored placeholder example](./colored-placeholder-music-albums.gif)
 
 The trick is pretty simple in itself:
 

@@ -1,0 +1,106 @@
+/* -------------------------------------------------
+== Webfonts configuration
+-------------------------------------------------- */
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible Next VF';
+	font-variation-settings: normal;
+	font-weight: 200 800;
+	/* Webkit-only implementation to enable Italic axis */
+	font-style: oblique 0deg 45deg;
+	font-display: swap;
+	font-stretch: normal;
+	src:
+		local('Atkinson Hyperlegible Next VF'),
+		local('Atkinson Hyperlegible Next'),
+		url('/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2') format('woff2');
+	/* fix x-align */
+	ascent-override: 93.5%;
+	descent-override: 25.5%;
+}
+
+
+/*
+	Hack to reduce flash of loading with fallback versions made with tweaked system fontstack https://www.industrialempathy.com/posts/high-performance-web-font-loading/
+ 	Generated using 'fontaine' https://github.com/unjs/fontaine
+*/
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Ubuntu");
+	ascent-override: 86.0285%;
+	descent-override: 17.4002%;
+	line-gap-override: 21.6152%;
+
+	size-adjust: 92.5275%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Cantarell");
+	ascent-override: 88.3513%;
+	descent-override: 17.87%;
+	line-gap-override: 22.1988%;
+
+	size-adjust: 90.0949%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Noto Sans");
+	ascent-override: 89.6209%;
+	descent-override: 18.1268%;
+	line-gap-override: 22.5178%;
+
+	size-adjust: 88.8186%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Roboto");
+	ascent-override: 84.1045%;
+	descent-override: 17.0111%;
+	line-gap-override: 21.1318%;
+
+	size-adjust: 94.6441%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Helvetica Neue");
+	ascent-override: 85.0831%;
+	descent-override: 17.209%;
+	line-gap-override: 21.3777%;
+
+	size-adjust: 93.5556%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Segoe UI");
+	ascent-override: 83.8276%;
+	descent-override: 16.9551%;
+	line-gap-override: 21.0622%;
+
+	size-adjust: 94.9568%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("BlinkMacSystemFont");
+	ascent-override: 78.7499%;
+	descent-override: 15.9281%;
+	line-gap-override: 19.7864%;
+
+	size-adjust: 101.0795%;
+}
+
+@font-face {
+	font-family: Atkinson-fallback;
+	src: local("Arial");
+	ascent-override: 84.2892%;
+	descent-override: 17.0484%;
+	line-gap-override: 21.1782%;
+
+	size-adjust: 94.4368%;
+}

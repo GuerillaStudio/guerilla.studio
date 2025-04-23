@@ -1,13 +1,21 @@
 ---
 layout: layouts/base.njk
-title: Blog of Guérilla.Studio
-description: We write stuff sometime
-eleventyNavigation:
-  key: Blog
-  order: 2
+title: "Blog posts"
+description: "Blog of Guérilla.Studio"
+heroRSSLink: true
 ---
-<h1>Blog</h1>
-<p class="slogan">{{description}}</p>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<style>{% include "style/page-posts.css" %}</style>
+
+{% include "components/hero.njk" %}
+
+<div class="container container--medium pb-section">
+	<ol reversed class="page-posts:list" role="list">
+	{% for post in collections.posts | reverse %}
+		<li class="page-posts:item">
+			<a class="page-posts:name" href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>PROBLEM TO REPORT:{{ post.url }}</code>{% endif %}</a>
+			<time class="page-posts:date" datetime="{{ post.date | htmlDateString }}"><span aria-hidden="true">—&nbsp;</span>{{ post.date | readableDate("LLLL yyyy") }}</time>
+		</li>
+	{% endfor %}
+	</ol>
+</div>

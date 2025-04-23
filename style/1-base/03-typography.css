@@ -1,0 +1,176 @@
+
+
+body {
+	font-family: var(--fontstack-sans);
+	font-size: var(--base-font);
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	line-height: var(--base-lh);
+}
+
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+	font-variation-settings: "ital" .75;
+	font-weight: 800;
+	font-style: italic;
+	line-height: 1.1em;
+	color: var(--color-dark-2);
+}
+
+.title-1 {
+	font-size: var(--scale-5);
+	line-height: 1;
+	letter-spacing: -0.03em
+}
+
+@media (--screen-md--reverse) {
+	.title-1.sticky {
+		position: sticky;
+		top: var(--scale-0);
+	}
+}
+
+.title-1 .subtitle {
+	display: block;
+	margin-top: .2em;
+	font-size: var(--scale-0);
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--color-dark-3);
+	letter-spacing: -0.04em;
+}
+
+.title-1 .subtitle a {
+	text-decoration-color: currentColor;
+	text-decoration-thickness: .08em;
+}
+.title-1 .subtitle a:hover {
+	text-decoration-color: var(--color-brand-1);
+	text-decoration-thickness: .12em;
+}
+
+.title-1 .subtitle a[href^="http"] {
+	padding-inline-end: .5em;
+}
+
+.title-1 .subtitle a[href^="http"]::after {
+	content: '↗' / '';
+	position: absolute;
+	margin-block-start: .5cap;
+	margin-inline-start: .5ch;
+	font-family: system-ui;
+	font-size: .5em;
+	vertical-align: super;
+	transition: .1s transform;
+}
+
+.title-1 .subtitle a[href^="http"]:where(:hover)::after {
+	transform: translate(.25em, -.25em);
+}
+
+.title-2 { font-size: var(--scale-3); }
+.title-3 { font-size: var(--scale-2); }
+.title-4 { font-size: var(--scale-1); }
+
+@media (--screen-sm) {
+	.title-1 { font-size: var(--scale-4); }
+	.title-2 { font-size: var(--scale-2); }
+	.title-3 { font-size: var(--scale-1); }
+	.title-4 { font-size: var(--scale-0); }
+}
+/* Global written content
+-------------------------------------------------- */
+
+.writing {
+	line-height: 1.6;
+}
+.writing :where(p) {
+	margin-block-end: 1.69em;
+}
+
+.writing :where(p:last-child) {
+	margin-block-end: 0em;
+}
+
+.writing :where(strong) {
+	font-weight: 800;
+	color: var(--color-dark-2);
+}
+
+.writing :where(img, picture) {
+	display: initial;
+	height: auto;
+	margin-inline: auto;
+}
+
+.writing :where(picture) {
+	line-height: 0; /* fix weird vertical margin */
+}
+
+.writing :where(img) {
+	border-radius: .15em;
+}
+
+.writing :where(ul) {
+	padding-inline-start: var(--scale-2);
+}
+
+.writing :where(code) {
+	padding: .3rem .5rem;
+	border-radius: 0.15em;
+	font-size: 85%;
+	word-break: break-all;
+	background: hsl(var(--color-hue-primary, 70) 55% 10% / .1);
+}
+
+.writing :where(pre) {
+	scrollbar-gutter: stable;
+	overflow: auto;
+	margin: .5em 0;
+	padding: 1em;
+	border-radius: 0.1em;
+}
+
+.writing :where(pre[class*="language-"]) {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	line-height: 1.5;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	color: var(--color-light-2);
+	text-align: left;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	white-space: pre;
+	background: none;
+	background-color: var(--color-dark-2);
+}
+
+.writing :where(pre[class*="language-"]) code {
+	background-color: transparent;
+}
+
+.writing :where(h1, h2, h3, h4, h5, h6) {
+	margin-block: .5em;
+	padding-block-start: 1em;
+	font-weight: 800;
+	line-height: 1.1;
+	color: var(--color-dark-2);
+}
+
+.writing :where(hr) {
+	width: 100%;
+	height: 0;
+	margin-block: var(--scale-3);
+	border: none;
+	border-bottom: .2em dotted hsl(var(--color-hue-primary) 5% 75%);
+	background: none;
+}

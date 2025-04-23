@@ -9,10 +9,9 @@ author:
   fedi_nickname: "@tixie@guerilla.studio"
   social_link: "https://mastodon.guerilla.studio/@tixie"
   kofi: "https://ko-fi.com/J3J3F2YAT"
-social_card_url: "/img/social-card-2024-vanilla-list-state-and-whats-next.png"
+social_card_url: "/img/social-card/2024-vanilla-list-state-and-whats-next.png"
 social_card_width: "1200"
 social_card_height: "630"
-twitter_card_type: "summary_large_image"
 ---
 
 As some of you may have noticed: [Vanilla List](https://vanillalist.top)—our index curating lightweight JavaScript plugins, is kinda in hiatus mode. I didn’t add any plugin/library since early 2023 and here were are, at the end of 2024.
@@ -82,7 +81,7 @@ Thank you already if you have read everything until now 🫶
 
 *As sign of hope for the future, a preview of the future homepage*:
 
-{% image "./future-homepage-preview.png", "Preview of the future homepage on a desktop sized screen", [560, 1120, 'auto'], [560px, 1120px, 1200px] %}
+![Preview of the future homepage on a desktop sized screen](./future-homepage-preview.png)
 
 
 <small><i>Thanks Hécate for fixing my typos</i>🫶</small>

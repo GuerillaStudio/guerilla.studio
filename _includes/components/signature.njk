@@ -1,0 +1,51 @@
+{# Signature section #}
+<div class="page-content:signature" id="signature">
+	<span aria-hidden="true">~</span>&nbsp;Sincerely yours,
+	{# Author of this page #}
+	<strong>
+		{%- if author and author.name %}
+			{{ author.name }}
+		{%- else %}
+			{{ metadata.founders }}
+		{%- endif %}
+	</strong>
+	<div class="page-content:signature-links">
+	{%- if author.url or author.email or author.social_link or author.kofi %}
+			{% set author_links = {
+				website: {
+					value: author.url,
+					label_short: "www",
+					label_long: "website"
+				},
+				email: {
+					value: author.email,
+					label_short: "email"
+				},
+				social: {
+					value: author.social_link,
+					label_short: "social",
+					label_long: "social profile"
+				},
+				kofi: {
+					value: author.kofi,
+					label_short: "support me on Ko-fi"
+				}
+			}
+			%}
+			{% for key, item in author_links %}
+				{% if loop.first %}({% endif %}{#
+				Opening brackets
+				#}<a
+					href="{%- if key == "email" %}mailto:{%- endif %}{{ item.value }}"
+					{%- if item.label_long %}aria-label="{{ item.label_long }}"{%- endif %}
+					{%- if key == "social" or key == "kofi" %}target="_blank"{%- endif %}
+				>{{ item.label_short}}</a>{#
+				 separator or closing bracket
+				 #}{% if not loop.last %}&#8239;/{%- else -%}){% endif %}
+			{% endfor %}
+	{%- endif %}
+	</div>
+	{# Author organization #}
+	{%- if author and author.org %}(from {{ author.org }}){%- endif %}
+	{# Author links #}
+</div>
