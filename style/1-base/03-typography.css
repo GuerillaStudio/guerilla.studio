@@ -1,4 +1,6 @@
-
+html {
+	font: -apple-system-body; /* allow to match preferred text size on iOS */
+}
 
 body {
 	font-family: var(--fontstack-sans);
