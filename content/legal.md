@@ -19,9 +19,14 @@ The code source is [shared](https://github.com/GuerillaStudio/guerilla.studio) p
 
 ## Hosting
 
-Website hosted by the company **Netlify, Inc.**:\
-2325 3rd Street, Suite 296, San Francisco, California 94107\
-[support@netlify.com](mailto:support@netlify.com)
+Website hosted by the {{ hosting.status }} **{{ hosting.name }}**:
+<address>
+{{ hosting.legalName }}<br>
+{{ hosting.legalAddress | safe }}
+</address>
+
+[{{ hosting.email }}](mailto:{{ hosting.email }})&nbsp;· [homepage]({{ hosting.url }})
+
 
 ## Cookies
 
