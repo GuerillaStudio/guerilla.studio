@@ -1,0 +1,54 @@
+{
+  "IndexDocument": {
+    "Suffix": "index.html"
+  },
+  "ErrorDocument": {
+    "Key": "404.html"
+  },
+  "RoutingRules": [
+    {
+      "Condition": {
+        "KeyPrefixEquals": ".well-known/host-meta"
+      },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "mastodon.guerilla.studio",
+        "ReplaceKeyWith": ".well-known/host-meta",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": {
+        "KeyPrefixEquals": ".well-known/nodeinfo"
+      },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "mastodon.guerilla.studio",
+        "ReplaceKeyWith": ".well-known/nodeinfo",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": {
+        "KeyPrefixEquals": "authorize_interaction"
+      },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "mastodon.guerilla.studio",
+        "ReplaceKeyPrefixWith": "authorize_interaction",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": {
+        "KeyPrefixEquals": "@"
+      },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "mastodon.guerilla.studio",
+        "ReplaceKeyPrefixWith": "@",
+        "HttpRedirectCode": "302"
+      }
+    }
+  ]
+}
