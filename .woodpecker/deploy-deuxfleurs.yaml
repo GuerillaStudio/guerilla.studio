@@ -1,0 +1,30 @@
+when:
+  - event: [tag, push, release, deployment, cron, manual]
+    branch: [main]
+
+steps:
+  - name: build
+    image: node:23.11
+    environment:
+      # secrets must be set in Woodpecker configuration
+      UMAMI_DOMAIN:
+        from_secret: umami_domain
+      UMAMI_ID:
+        from_secret: umami_id
+    commands:
+      - npm ci
+      - npm run build
+  - name: upload
+    image: woodpeckerci/plugin-s3
+    settings:
+      bucket: guerilla.studio
+      endpoint: https://garage.deuxfleurs.fr
+      region: garage
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      source: _site/**/*
+      target: /
+      strip_prefix: _site/
+      path_style: true
