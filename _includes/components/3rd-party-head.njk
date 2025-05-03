@@ -1,5 +1,5 @@
 {% if (eleventy.env.runMode == 'build') %}
 	{% if (env.UMAMI_DOMAIN and env.UMAMI_ID) %}
-	<script defer src="https://{{ env.UMAMI_DOMAIN }}/script.js" data-website-id="{{ env.UMAMI_ID }}"></script>
+	<script defer src="https://{{ env.UMAMI_DOMAIN }}/script.js" data-website-id="{{ env.UMAMI_ID }}" data-domains="guerilla.studio"></script>
 	{% endif %}
 {% endif %}
