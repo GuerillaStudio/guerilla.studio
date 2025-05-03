@@ -1,5 +1,7 @@
 # Guérilla.Studio Homepage
 
+![](cover.png)
+
 ## Run it in local
 
 1. Install dependencies
