@@ -1,23 +1,19 @@
 [[redirects]]
-  from = "/.well-known/host-meta"
-  to = "https://mastodon.guerilla.studio/.well-known/host-meta"
-  status = 301
-  force = true
+	from = "/.well-known/host-meta"
+	to = "https://mastodon.guerilla.studio/.well-known/host-meta"
+	status = 301
+	force = true
 [[redirects]]
-  from = "/.well-known/nodeinfo"
-  to = "https://mastodon.guerilla.studio/.well-known/nodeinfo"
-  status = 301
-  force = true
+	from = "/.well-known/nodeinfo"
+	to = "https://mastodon.guerilla.studio/.well-known/nodeinfo"
+	status = 301
+	force = true
 [[redirects]]
-  from = "/authorize_interaction*"
-  to = "https://mastodon.guerilla.studio/authorize_interaction:splat"
-  status = 301
-  force = true
+	from = "/authorize_interaction*"
+	to = "https://mastodon.guerilla.studio/authorize_interaction:splat"
+	status = 301
+	force = true
 [[redirects]]
-  from = "/@*"
-  to = "https://mastodon.guerilla.studio/@:splat"
-  status = 302
-
-[build]
-  publish = "_site"
-  command = "npm run build"
+	from = "/@*"
+	to = "https://mastodon.guerilla.studio/@:splat"
+	status = 302

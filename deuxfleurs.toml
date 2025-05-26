@@ -1,0 +1,16 @@
+error_page = "404.html"
+
+[[redirects]]
+	from = ".well-known/host-meta"
+	to = "https://mastodon.guerilla.studio/.well-known/host-meta"
+[[redirects]]
+	from = ".well-known/nodeinfo"
+	to = "https://mastodon.guerilla.studio/.well-known/nodeinfo"
+[[redirects]]
+	from = "authorize_interaction*"
+	to = "https://mastodon.guerilla.studio/authorize_interaction*"
+	status = 301
+[[redirects]]
+	from = "@*"
+	to = "https://mastodon.guerilla.studio/@*"
+	status = 302
