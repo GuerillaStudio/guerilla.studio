@@ -8,3 +8,8 @@ html, body {
 	scroll-margin-top: 1lh;
 	outline-offset: .15rem;
 }
+
+/* cross-document view transitions */
+@view-transition {
+	navigation: auto;
+}
